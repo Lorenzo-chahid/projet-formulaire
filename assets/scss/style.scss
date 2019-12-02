@@ -1,0 +1,27 @@
+// TEMPLATE FOR ALL //
+*{
+    scroll-behavior: smooth;
+}
+
+.container{
+    min-width: 100%;
+}
+h1{
+    text-align: center;
+    color: white;
+}
+
+#logoImg{
+    width: 5rem;
+}
+
+#background{
+    background-image: url("../charte/assets/img/bg1.jpg");
+    background-repeat: repeat;
+    background-size: contain;
+    min-width: 100%;
+    min-height: 500px;
+}
+
+
+

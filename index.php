@@ -13,9 +13,7 @@
        <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
+        
     </head>
     <body>
         
@@ -23,9 +21,9 @@
              <!-- NAVBAR  START-->
             <nav>
                 <div class="nav-wrapper teal lighten-2">
-                <a href="#!" class="brand-logo"><img src="assets/charte/assets/img/hackers-poulette-logo.png" id="logoImg"/> </a>
+                <a href="#!" class="brand-logo"><img src="assets/charte/assets/img/logo_blanc.png" alt="petit_logo_blanc" id="logoImg"/> </a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="sass.html"><i class="material-icons">search</i></a></li>
+                    <li><a href="#search"><i class="material-icons">search</i></a></li>
                     <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
                     <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
                     <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
@@ -37,8 +35,10 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div class="row">
-        <div class="col s12 cyan darken-3 "id="background" >
-            <h1>HACKERS POULETTES</h1>
+        <div class="col s12  cyan darken-3 "id="background" >
+            <div>
+                <a class="waves-effect waves-light btn-large pulse" id="center">Button</a>
+            </div>
         </div>
         <div class="col s12 m4 l2 cyan darken-3"><p>s12 m4</p></div>
         <div class="col s12 m4 l8 cyan darken-2"><p>s12 m4</p></div>
@@ -54,7 +54,7 @@
 
 
     <!-- FOOTER -->
-    <footer class="page-footer">
+    <footer class="page-footer" id="search">
           <div class="container">
             <div class="row">
               <div class="col l6 s12">

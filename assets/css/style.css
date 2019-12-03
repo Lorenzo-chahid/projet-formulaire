@@ -28,4 +28,8 @@ h1 {
   min-width: 100%;
   min-height: 100vh;
 }
+
+.card-image {
+  width: 20px;
+}
 /*# sourceMappingURL=style.css.map */

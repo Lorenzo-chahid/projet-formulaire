@@ -9,6 +9,7 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/style.css">
        <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -52,6 +53,64 @@
     </div>
 
 
+  <!--FORMULAIRE HTML -->
+
+<h4>Inscrivez-vous pour les informations relatives à la formation : </h4>
+<form name="inscription" method="post" action="saisie.php">
+<div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="prenom" type="text" class="validate">
+          <label for="prenom">Prénom</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="nom" type="text" class="validate">
+          <label for="nom">Nom</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input  id="ville" type="text" class="validate">
+          <label for="ville">Ville</label>
+        </div>
+      </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+      </div>
+      <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+        <i class="material-icons right">send</i>
+      </button>
+        
+      </div>
+    </form>
+  </div>
+  </form>
+
+  <!--PHP DU FORMULAIRE -->
+<?php
+  $prenom = $_POST ["prenom"]; 
+  $nom = $_POST["nom"]; 
+  $ville = $_POST["ville"]; 
+  $email = $_POST["email"];
+
+  //Tableau message d'erreur 
+
+  
+
+  if (isset ($prenom)&& isset($nom)&& isset($ville)&& isset($email)){
+    if (($prenom == true)&& ($nom == true) && ($ville==true) && ($email==true)){
+      echo " Coucou $prenom, $nom, de $ville, adresse mail: $email";
+    }
+    
+  }
+
+?>
+
 
     <!-- FOOTER -->
     <footer class="page-footer" id="search">
@@ -88,5 +147,6 @@
        
             
         <script src="" async defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     </body>
 </html>

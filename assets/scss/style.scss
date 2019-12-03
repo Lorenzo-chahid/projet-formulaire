@@ -15,13 +15,29 @@ h1{
     width: 5rem;
 }
 
-#background{
-    background-image: url("../charte/assets/img/bg1.jpg");
-    background-repeat: repeat;
-    background-size: contain;
-    min-width: 100%;
-    min-height: 500px;
+
+#center{
+    
+    width: 50%;
+    margin: auto;
+   
 }
 
 
+ // IMAGE-BACKGROUND //
+#background{
+    background-image: url("../charte/assets/img/back_logo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+//PRESENTATION HACKERS POULETTE// 
+
+.card-image{
+
+    width: 20px;
+}
 

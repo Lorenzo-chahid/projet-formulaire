@@ -15,6 +15,7 @@
         <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     
 
         
     </head>
@@ -56,7 +57,7 @@
     </div>
 
 
-    <!-- *********************************************-- SECTION ECRAN 2 START *********************************************-->
+<!-- *********************************************-- SECTION ECRAN 2 START *********************************************-->
     <section id="base">
 
       <div class="col s12 m7">
@@ -95,16 +96,31 @@
       </div>
  
     </section>
-  <!-- *********************************************-- SECTION ECRAN 2 FIN *********************************************-->
+<!-- *********************************************-- SECTION ECRAN 2 FIN *********************************************-->
 
 
-  <!-- *********************************************-- SECTION ECRAN 3 START *********************************************-->
+<!-- *********************************************-- SECTION ECRAN 3 START *********************************************-->
+
+<h2>Nos Produit</h2>
+
+ 
+
+ 
+  
+  
+
+
+
+
+<!-- *********************************************-- SECTION ECRAN 3 FIN *********************************************-->
 
 
 
   
 
-  <!--FORMULAIRE HTML -->
+  
+<!-- *********************************************-- SECTION FORMULAIRE *********************************************-->
+
 
   <h4>Inscrivez-vous pour les informations relatives à la formation : </h4>
     <form name="inscription" method="post" action="saisie.php">
@@ -144,26 +160,33 @@
 
 
 
+
     <!--PHP DU FORMULAIRE -->
-  <?php
-    $prenom = $_POST ["prenom"]; 
-    $nom = $_POST["nom"]; 
-    $ville = $_POST["ville"]; 
-    $email = $_POST["email"];
+    <?php
+      $prenom = $_POST ["prenom"]; 
+      $nom = $_POST["nom"]; 
+      $ville = $_POST["ville"]; 
+      $email = $_POST["email"];
 
-    //Tableau message d'erreur 
+      //Tableau message d'erreur 
 
-    
-
-    if (isset ($prenom)&& isset($nom)&& isset($ville)&& isset($email)){
-      if (($prenom == true)&& ($nom == true) && ($ville==true) && ($email==true)){
-        echo " Coucou $prenom, $nom, de $ville, adresse mail: $email";
-      }
       
-    }
 
-  ?>
+      if (isset ($prenom)&& isset($nom)&& isset($ville)&& isset($email)){
+        if (($prenom == true)&& ($nom == true) && ($ville==true) && ($email==true)){
+          echo " Coucou $prenom, $nom, de $ville, adresse mail: $email";
+        }
+        
+      }
 
+    ?>
+<!-- *********************************************-- SECTION FORMULAIRE FIN *********************************************-->
+
+
+<!-- *********************************************-- SECTION ABOUT US START *********************************************-->
+
+
+<!-- *********************************************-- SECTION ABOUT US END *********************************************-->
 
     <!-- FOOTER -->
     <footer class="page-footer" id="search">
@@ -198,8 +221,11 @@
         
     
 </section>
-            
-        <script src="" async defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    </body>
+
+
+   
+   
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   
+</body>
 </html>

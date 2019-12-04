@@ -186,25 +186,7 @@ function autoplay() {
 
 
     <!--PHP DU FORMULAIRE -->
-    <?php
-      $prenom = $_POST ["prenom"]; 
-      $nom = $_POST["nom"]; 
-      $ville = $_POST["ville"]; 
-      $email = $_POST["email"];
-
-      //Tableau message d'erreur 
-
-      
-
-      if (isset ($prenom)&& isset($nom)&& isset($ville)&& isset($email)){
-        if (($prenom == true)&& ($nom == true) && ($ville==true) && ($email==true)){
-          echo " Coucou $prenom, $nom, de $ville, adresse mail: $email";
-        }
-        
-      }
-
-    ?>
-
+    
 <!-- SEND EMAIL BY SENDGRID -->
 
 <?php

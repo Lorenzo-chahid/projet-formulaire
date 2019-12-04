@@ -186,10 +186,12 @@ function autoplay() {
 
 
     <!--PHP DU FORMULAIRE -->
-    
+  
+
 <!-- SEND EMAIL BY SENDGRID -->
 
 <?php
+ $email = $_POST["email"];
 //require 'vendor/autoload.php'; // If you're using Composer (recommended)
 // Comment out the above line if not using Composer
 require("sendgrid-php/sendgrid-php.php");

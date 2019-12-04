@@ -218,21 +218,21 @@ function autoplay() {
           "text/html", "<strong>and easy to do anywhere, even with PHP</strong>"
       );
       $sendgrid = new \SendGrid(getenv("SENDGRID_API_KEY"));
-      if($sendgrid->send($email)){
-       echo " Email sent SuccessFully";
-      }else{
-       echo "errors BIATCH ";
-      }
+      //if($sendgrid->send($email)){
+       // echo " Email sent SuccessFully";
+      //}else{
+      //  echo "errors";
+      //}
+    
+     try {
+         $response = $sendgrid->send($email);
+        print $response->statusCode() . "\n";
+        print_r($response->headers());
+        print $response->body() . "\n";
+     } catch (Exception $e) {
+        echo 'Caught exception: '. $e->getMessage() ."\n";
+     }
     }
-   //  try {
-   //      $response = $sendgrid->send($email);
-   //     print $response->statusCode() . "\n";
-   //     print_r($response->headers());
-   //     print $response->body() . "\n";
-   //  } catch (Exception $e) {
-   //     echo 'Caught exception: '. $e->getMessage() ."\n";
-    // }
-    //}
 
 
 

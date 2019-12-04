@@ -205,7 +205,6 @@ function autoplay() {
 
     if(isset($_POST["sendemail"])){
       $name = $_POST["name"];
-      $name = $_POST["name"];
       $secondName = $_POST["secondName"];
       $city = $_POST["ville"];
       $mail = $_POST["email"];

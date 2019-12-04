@@ -1,6 +1,7 @@
 // TEMPLATE FOR ALL //
 *{
     scroll-behavior: smooth;
+    
 }
 
 .container{
@@ -21,16 +22,20 @@ h2{
 
 
 #center{
-    
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 9rem;
     width: 50%;
     margin: auto;
+    
    
 }
 
 
  // IMAGE-BACKGROUND //
 #background{
-    background-image: url("../charte/assets/img/back_logo.jpg");
+    background-image: url("../img/Back_logo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;

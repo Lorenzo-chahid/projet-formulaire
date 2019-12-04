@@ -226,9 +226,10 @@ function autoplay() {
     
      try {
          $response = $sendgrid->send($email);
-        print $response->statusCode() . "\n";
-        print_r($response->headers());
-        print $response->body() . "\n";
+        //print $response->statusCode() . "\n";
+        //print_r($response->headers());
+        //print $response->body() . "\n";
+        echo "SEND EMAIL WITH SUCCES";
      } catch (Exception $e) {
         echo 'Caught exception: '. $e->getMessage() ."\n";
      }

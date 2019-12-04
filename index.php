@@ -56,110 +56,113 @@
     </div>
 
 
-    <!-- *********************************************-- SECTION ARTICLE START *********************************************-->
+    <!-- *********************************************-- SECTION ECRAN 2 START *********************************************-->
     <section id="base">
 
       <div class="col s12 m7">
       
-      <div class="card horizontal">
-        <div class="card-image">
-          <img src="assets/charte/assets/img/mimi_car.jpeg" alt="mini car pink" class="imgBase">
-        </div>
-        <div class="card-stacked">
-          <div class="card-content">
-            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <div class="card horizontal">
+          <div class="card-image">
+            <img src="assets/charte/assets/img/mimi_car.jpeg" alt="mini car pink" class="imgBase">
           </div>
-          <div class="card-action">
-            <a href="#">This is a link</a>
+          <div class="card-stacked">
+            <div class="card-content">
+              <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <!-- DEUXIEME ARTICLE -->
-    <div class="col s12 m7">
-    
-    <div class="card horizontal">
+      <!-- DEUXIEME ARTICLE -->
+      <div class="col s12 m7">
       
-      <div class="card-stacked">
-        <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.</p>
-        </div>
-        <div class="card-action">
-          <a href="#">This is a link</a>
+        <div class="card horizontal">
+          <div class="card-stacked">
+            <div class="card-content">
+              <p>I am a very simple card. I am good at containing small bits of information.</p>
+            </div>
+            <div class="card-action">
+              <a href="#">This is a link</a>
+            </div>
+          </div>
+          <div class="card-image">
+            <img src="assets/charte/assets/img/card.jpeg" alt="raspberry pi card" class="imgBase">
+          </div>
         </div>
       </div>
-      <div class="card-image">
-        <img src="assets/charte/assets/img/card.jpeg" alt="raspberry pi card" class="imgBase">
-      </div>
-    </div>
-    
-  </div>
-
-
  
     </section>
-     <!-- *********************************************-- SECTION ARTICLE FIN *********************************************-->
+  <!-- *********************************************-- SECTION ECRAN 2 FIN *********************************************-->
+
+
+  <!-- *********************************************-- SECTION ECRAN 3 START *********************************************-->
+
+
 
   
 
   <!--FORMULAIRE HTML -->
 
-<h4>Inscrivez-vous pour les informations relatives à la formation : </h4>
-<form name="inscription" method="post" action="saisie.php">
-<div class="row">
-    <form class="col s12">
+  <h4>Inscrivez-vous pour les informations relatives à la formation : </h4>
+    <form name="inscription" method="post" action="saisie.php">
       <div class="row">
-        <div class="input-field col s6">
-          <input id="prenom" type="text" class="validate">
-          <label for="prenom">Prénom</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="nom" type="text" class="validate">
-          <label for="nom">Nom</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input  id="ville" type="text" class="validate">
-          <label for="ville">Ville</label>
-        </div>
-      </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-          <input id="email" type="email" class="validate">
-          <label for="email">Email</label>
-        </div>
-      </div>
-      <button class="btn waves-effect waves-light" type="submit" name="action">Submit
-        <i class="material-icons right">send</i>
-      </button>
-        
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s6">
+              <input id="prenom" type="text" class="validate">
+              <label for="prenom">Prénom</label>
+            </div>
+            <div class="input-field col s6">
+              <input id="nom" type="text" class="validate">
+              <label for="nom">Nom</label>
+            </div>
+          </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input  id="ville" type="text" class="validate">
+                <label for="ville">Ville</label>
+              </div>
+            </div>
+          </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input id="email" type="email" class="validate">
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div>
+              <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                <i class="material-icons right">send</i>
+              </button>  
+            </div>
+        </form>
       </div>
     </form>
-  </div>
-  </form>
 
-  <!--PHP DU FORMULAIRE -->
-<?php
-  $prenom = $_POST ["prenom"]; 
-  $nom = $_POST["nom"]; 
-  $ville = $_POST["ville"]; 
-  $email = $_POST["email"];
 
-  //Tableau message d'erreur 
 
-  
+    <!--PHP DU FORMULAIRE -->
+  <?php
+    $prenom = $_POST ["prenom"]; 
+    $nom = $_POST["nom"]; 
+    $ville = $_POST["ville"]; 
+    $email = $_POST["email"];
 
-  if (isset ($prenom)&& isset($nom)&& isset($ville)&& isset($email)){
-    if (($prenom == true)&& ($nom == true) && ($ville==true) && ($email==true)){
-      echo " Coucou $prenom, $nom, de $ville, adresse mail: $email";
-    }
+    //Tableau message d'erreur 
+
     
-  }
 
-?>
+    if (isset ($prenom)&& isset($nom)&& isset($ville)&& isset($email)){
+      if (($prenom == true)&& ($nom == true) && ($ville==true) && ($email==true)){
+        echo " Coucou $prenom, $nom, de $ville, adresse mail: $email";
+      }
+      
+    }
+
+  ?>
 
 
     <!-- FOOTER -->

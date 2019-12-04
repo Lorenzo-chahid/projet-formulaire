@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -150,7 +151,7 @@ function autoplay() {
 
 
   <h4>Inscrivez-vous pour les informations relatives à la formation : </h4>
-    <form name="inscription" method="post" action="saisie.php">
+    <form name="inscription" method="post" >
       <div class="row">
         <form class="col s12">
           <div class="row">
@@ -189,44 +190,47 @@ function autoplay() {
 
 
     <!--PHP DU FORMULAIRE -->
-    <?php
-require 'vendor/autoload.php'; // If you're using Composer (recommended)
-// Comment out the above line if not using Composer
-//require("sendgrid-php/sendgrid-php.php");
-// If not using Composer, uncomment the above line and
-// download sendgrid-php.zip from the latest release here,
-// replacing <PATH TO> with the path to the sendgrid-php.php file,
-// which is included in the download:
-// https://github.com/sendgrid/sendgrid-php/releases
+Ò<?php
+    require 'vendor/autoload.php'; // If you're using Composer (recommended)
+    // Comment out the above line if not using Composer
+    //require("sendgrid-php/sendgrid-php.php");
+    // If not using Composer, uncomment the above line and
+    // download sendgrid-php.zip from the latest release here,
+    // replacing <PATH TO> with the path to the sendgrid-php.php file,
+    // which is included in the download:
+    // https://github.com/sendgrid/sendgrid-php/releases
 
-if(isset($_POST["sendemail"])){
-  $name = $_POST["name"];
-  $name = $_POST["name"];
-  $secondName = $_POST["secondName"];
-  $city = $_POST["ville"];
-  $mail = $_POST["email"];
+    if(isset($_POST["sendemail"])){
+      $name = $_POST["name"];
+      $name = $_POST["name"];
+      $secondName = $_POST["secondName"];
+      $city = $_POST["ville"];
+      $mail = $_POST["email"];
 
-  $email = new \SendGrid\Mail\Mail(); 
-  $email->setFrom("chahid.lorenzo@outlook.com", "Lorenzo");
-  $email->setSubject("Sending with SendGrid is Fun");
-  $email->addTo($mail, $name);
-  $email->addContent("text/plain", "and easy to do anywhere, even with PHP");
-  $email->addContent(
-      "text/html", "<strong>and easy to do anywhere, even with PHP</strong>"
-  );
-  $sendgrid = new \SendGrid(getenv($API_KEY));
-  if($sendgrid->send($email)){
-    echo " Email sent SuccessFully";
-  }
-  try {
-      $response = $sendgrid->send($email);
-      print $response->statusCode() . "\n";
-      print_r($response->headers());
-      print $response->body() . "\n";
-  } catch (Exception $e) {
-      echo 'Caught exception: '. $e->getMessage() ."\n";
-  }
-}
+      $email = new \SendGrid\Mail\Mail(); 
+      $email->setFrom("chahid.lorenzo@outlook.com", "Lorenzo");
+      $email->setSubject("Sending with SendGrid is Fun");
+      $email->addTo($mail, $name);
+      $email->addContent("text/plain", "and easy to do anywhere, even with PHP");
+      $email->addContent(
+          "text/html", "<strong>and easy to do anywhere, even with PHP</strong>"
+      );
+      $sendgrid = new \SendGrid(getenv($API_KEY));
+      if($sendgrid->send($email)){
+        echo " Email sent SuccessFully";
+      }else{
+        echo "errors";
+      }
+    }
+    // try {
+    //     $response = $sendgrid->send($email);
+    //     print $response->statusCode() . "\n";
+      //    print_r($response->headers());
+      //    print $response->body() . "\n";
+    // } catch (Exception $e) {
+    //     echo 'Caught exception: '. $e->getMessage() ."\n";
+    //  }
+    //}
 
 
 

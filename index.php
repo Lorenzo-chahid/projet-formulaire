@@ -12,19 +12,21 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/style.css">
        <!-- Compiled and minified CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
         
     </head>
     <body>
         
-        <div class="container"><!-- Page Content goes here -->
+        <section class="container"> <!-- Page Content goes here -->
              <!-- NAVBAR  START-->
             <nav>
                 <div class="nav-wrapper teal lighten-2">
                 <a href="#!" class="brand-logo"><img src="assets/charte/assets/img/logo_blanc.png" alt="petit_logo_blanc" id="logoImg"/> </a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="#search"><i class="material-icons">search</i></a></li>
+                    <li><a href="#base"><i class="material-icons">search</i></a></li>
                     <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
                     <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
                     <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
@@ -37,8 +39,9 @@
         <![endif]-->
         <div class="row">
         <div class="col s12  cyan darken-3 "id="background" >
-            <div>
-                <a class="waves-effect waves-light btn-large pulse" id="center">Button</a>
+            <div id="center">
+            <a class="waves-effect waves-light btn-large pulse tooltip" id="callTo" >REJOINGEZ NOUS</a>
+            <span class="tooltiptext">C'est l'éclate !</span>
             </div>
         </div>
         <div class="col s12 m4 l2 cyan darken-3"><p>s12 m4</p></div>
@@ -52,6 +55,53 @@
         <div class="col s12 m6 l3 cyan darken-3"><p>s12 m6 l3</p></div>
     </div>
 
+
+    <!-- *********************************************-- SECTION ARTICLE START *********************************************-->
+    <section id="base">
+
+      <div class="col s12 m7">
+      
+      <div class="card horizontal">
+        <div class="card-image">
+          <img src="assets/charte/assets/img/mimi_car.jpeg" alt="mini car pink" class="imgBase">
+        </div>
+        <div class="card-stacked">
+          <div class="card-content">
+            <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+          </div>
+          <div class="card-action">
+            <a href="#">This is a link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DEUXIEME ARTICLE -->
+    <div class="col s12 m7">
+    
+    <div class="card horizontal">
+      
+      <div class="card-stacked">
+        <div class="card-content">
+          <p>I am a very simple card. I am good at containing small bits of information.</p>
+        </div>
+        <div class="card-action">
+          <a href="#">This is a link</a>
+        </div>
+      </div>
+      <div class="card-image">
+        <img src="assets/charte/assets/img/card.jpeg" alt="raspberry pi card" class="imgBase">
+      </div>
+    </div>
+    
+  </div>
+
+
+ 
+    </section>
+     <!-- *********************************************-- SECTION ARTICLE FIN *********************************************-->
+
+  
 
   <!--FORMULAIRE HTML -->
 
@@ -144,7 +194,7 @@
        
         
     
-       
+</section>
             
         <script src="" async defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>

@@ -14,13 +14,17 @@ $ville = $_POST["ville"];
 $email = $_POST["email"];
  
 
-if (isset ($prenom)&& isset($nom)&& isset($ville)&& isset($email)){
-    if (($prenom == true)&& ($nom == true) && ($ville==true) && ($email==true)){
-      echo " Coucou $prenom, $nom, de $ville, adresse mail: $email";
-    }
-    
-  }
+
 ?>
+<form method="post" action="cible.php">
+ 
+ <p>
+     On insèrera ici les éléments de notre formulaire.
+ </p>
+  
+ </form>
+
+
 
 </head>
 <body>

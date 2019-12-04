@@ -19,30 +19,23 @@ h2 {
   width: 5rem;
 }
 
-nav {
-  position: fixed;
-  z-index: 999;
-}
-
 #center {
-  width: 50%;
-  margin: auto;
-  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   padding-bottom: 9rem;
-  z-index: 2;
+  width: 50%;
+  margin: auto;
 }
 
 #background {
-  background-image: url("../img/back_logo.jpg");
+  background-image: url("../img/Back_logo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -50,13 +43,7 @@ nav {
   min-height: 100vh;
 }
 
-#base {
-  min-width: 100%;
-}
-
-section {
-  min-height: 100vh;
-  max-height: 100vh;
-  margin-bottom: 5rem;
+.card-image {
+  width: 20px;
 }
 /*# sourceMappingURL=style.css.map */

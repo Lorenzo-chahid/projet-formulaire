@@ -191,9 +191,10 @@ function autoplay() {
 
     <!--PHP DU FORMULAIRE -->
 <?php
-$SENDGRID_API_KEY='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';
+
 
     require 'vendor/autoload.php'; // If you're using Composer (recommended)
+    $SENDGRID_API_KEY='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';
     // Comment out the above line if not using Composer
     //require("sendgrid-php/sendgrid-php.php");
     // If not using Composer, uncomment the above line and

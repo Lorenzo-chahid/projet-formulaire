@@ -53,6 +53,7 @@ h1 {
   min-height: 100vh;
 }
 
+<<<<<<< HEAD
 .tooltip {
   position: relative;
   display: inline-block;
@@ -91,5 +92,9 @@ h1 {
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
+=======
+.card-image {
+  width: 20px;
+>>>>>>> master
 }
 /*# sourceMappingURL=style.css.map */

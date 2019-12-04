@@ -191,7 +191,7 @@ function autoplay() {
 <!-- SEND EMAIL BY SENDGRID -->
 
 <?php
- $email = $_POST["email"];
+ 
 require 'vendor/autoload.php'; // If you're using Composer (recommended)
 // Comment out the above line if not using Composer
 //require("sendgrid-php/sendgrid-php.php");
@@ -200,6 +200,7 @@ require 'vendor/autoload.php'; // If you're using Composer (recommended)
 // replacing <PATH TO> with the path to the sendgrid-php.php file,
 // which is included in the download:
 // https://github.com/sendgrid/sendgrid-php/releases
+$email = $_POST["email"];
 $email = new \SendGrid\Mail\Mail(); 
 $email->setFrom("test@example.com", "Example User");
 $email->setSubject("Sending with SendGrid is Fun");

@@ -156,7 +156,7 @@ function autoplay() {
         <form class="col s12">
           <div class="row">
             <div class="input-field col s6">
-              <input id="prenom" type="text" class="validate" name="name">
+              <input id="prenom" type="text" class="validate" name="firstName">
               <label for="prenom">Prénom</label>
             </div>
             <div class="input-field col s6">
@@ -166,14 +166,14 @@ function autoplay() {
           </div>
             <div class="row">
               <div class="input-field col s12">
-                <input  id="ville" type="text" class="validate">
+                <input  id="ville" type="text" class="validate" name="ville">
                 <label for="ville">Ville</label>
               </div>
             </div>
           </div>
             <div class="row">
               <div class="input-field col s12">
-                <input id="email" type="email" class="validate">
+                <input id="email" type="email" class="validate" name="idEmail">
                 <label for="email">Email</label>
               </div>
             </div>
@@ -204,10 +204,10 @@ function autoplay() {
     // https://github.com/sendgrid/sendgrid-php/releases
 
     if(isset($_POST["sendemail"])){
-      $name = $_POST["name"];
+      $name = $_POST["firstName"];
       $secondName = $_POST["secondName"];
       $city = $_POST["ville"];
-      $mail = $_POST["email"];
+      $mail = $_POST["idEmail"];
 
       $email = new \SendGrid\Mail\Mail(); 
       $email->setFrom("chahid.lorenzo@outlook.com", "Lorenzo");

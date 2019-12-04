@@ -217,7 +217,7 @@ function autoplay() {
       $email->addContent(
           "text/html", "<strong>and easy to do anywhere, even with PHP</strong>"
       );
-      $sendgrid = new \SendGrid(getenv("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"));
+      $sendgrid = new \SendGrid(getenv("SENDGRID_API_KEY"));
       //if($sendgrid->send($email)){
        // echo " Email sent SuccessFully";
       //}else{

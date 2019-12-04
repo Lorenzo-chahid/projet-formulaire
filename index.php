@@ -23,13 +23,14 @@
         
         <section class="container"> <!-- Page Content goes here -->
              <!-- NAVBAR  START-->
+             <section id=#home>
             <nav>
                 <div class="nav-wrapper teal lighten-2">
                 <a href="#!" class="brand-logo"><img src="assets/charte/assets/img/logo_blanc.png" alt="petit_logo_blanc" id="logoImg"/> </a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="#base"><i class="material-icons">search</i></a></li>
-                    <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
-                    <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
+                    <li><a href="#home"><i class="material-icons">search</i></a></li>
+                    <li><a href="#base"><i class="material-icons">directions_walk</i></a></li>
+                    <li><a href="#produit"><i class="material-icons">add_shopping_cart</i></a></li>
                     <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
                 </ul>
                 </div>
@@ -38,33 +39,25 @@
              <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div class="row">
-        <div class="col s12  cyan darken-3 "id="background" >
-            <div id="center">
-            <a class="waves-effect waves-light btn-large pulse tooltip" id="callTo" >REJOINGEZ NOUS</a>
-            <span class="tooltiptext">C'est l'éclate !</span>
-            </div>
-        </div>
-        <div class="col s12 m4 l2 cyan darken-3"><p>s12 m4</p></div>
-        <div class="col s12 m4 l8 cyan darken-2"><p>s12 m4</p></div>
-        <div class="col s12 m4 l2 cyan darken-1"><p>s12 m4</p></div>
-    </div>
-    <div class="row">
-        <div class="col s12 m6 l3 cyan darken-3"><p>s12 m6 l3</p></div>
-        <div class="col s12 m6 l3 cyan darken-3"><p>s12 m6 l3</p></div>
-        <div class="col s12 m6 l3 cyan darken-3"><p>s12 m6 l3</p></div>
-        <div class="col s12 m6 l3 cyan darken-3"><p>s12 m6 l3</p></div>
-    </div>
+        
+          <div class="row">
+          <div class="col s12  cyan darken-3 "id="background" >
+              <div id="center">
+              <a class="waves-effect waves-light btn-large pulse tooltip" id="callTo" >REJOINGEZ NOUS</a>
+              </div>
+          </div>
+        </section>
+    
 
 
 <!-- *********************************************-- SECTION ECRAN 2 START *********************************************-->
-    <section id="base">
+    <section class="row" id="base">
 
-      <div class="col s12 m7">
+      <div class="col s12 m12">
       
         <div class="card horizontal">
           <div class="card-image">
-            <img src="assets/charte/assets/img/mimi_car.jpeg" alt="mini car pink" class="imgBase">
+            <img src="assets/img/mimi_car.jpeg" alt="mini car pink" class="imgBase">
           </div>
           <div class="card-stacked">
             <div class="card-content">
@@ -78,7 +71,7 @@
       </div>
 
       <!-- DEUXIEME ARTICLE -->
-      <div class="col s12 m7">
+      <div class="col s12 m12">
       
         <div class="card horizontal">
           <div class="card-stacked">
@@ -90,7 +83,7 @@
             </div>
           </div>
           <div class="card-image">
-            <img src="assets/charte/assets/img/card.jpeg" alt="raspberry pi card" class="imgBase">
+            <img src="assets/img/card.jpeg" alt="raspberry pi card" class="imgBase">
           </div>
         </div>
       </div>
@@ -100,8 +93,9 @@
 
 
 <!-- *********************************************-- SECTION ECRAN 3 START *********************************************-->
-
-<h2>Nos Produit</h2>
+<section id="produit">
+  <h2>Nos Produits</h2>
+</section>
 
  
 
@@ -184,7 +178,9 @@
 
 
 <!-- *********************************************-- SECTION ABOUT US START *********************************************-->
-
+<section id="about">
+  <h2>QUI NOUS SOMMES</h2>
+</section>
 
 <!-- *********************************************-- SECTION ABOUT US END *********************************************-->
 

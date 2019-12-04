@@ -25,12 +25,18 @@ h2{
     width: 50%;
     margin: auto;
    
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 9rem;
+   
 }
 
 
  // IMAGE-BACKGROUND //
 #background{
-    background-image: url("../charte/assets/img/back_logo.jpg");
+    background-image: url("../img/back_logo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -40,8 +46,14 @@ h2{
 
 //PRESENTATION HACKERS POULETTE// 
 
-.card-image{
-
-    width: 20px;
+#base{
+    min-width: 100%;
 }
+
+section{
+    min-height: 100vh;
+    max-height: 100vh;
+    margin-bottom: 5rem;
+}
+
 

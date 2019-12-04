@@ -194,7 +194,7 @@ function autoplay() {
 
 
     require 'vendor/autoload.php'; // If you're using Composer (recommended)
-    
+    $API_KEY = "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";
     // Comment out the above line if not using Composer
     //require("sendgrid-php/sendgrid-php.php");
     // If not using Composer, uncomment the above line and
@@ -217,7 +217,7 @@ function autoplay() {
       $email->addContent(
           "text/html", "<strong>and easy to do anywhere, even with PHP</strong>"
       );
-      //$sendgrid = new \SendGrid(getenv($SENDGRID_API_KEY));
+      $sendgrid = new \SendGrid(getenv($API_KEY));
       //if($sendgrid->send($email)){
        // echo " Email sent SuccessFully";
       //}else{

@@ -19,8 +19,11 @@ $email = $_POST["email"];
 <form method="post" action="cible.php">
  
  <p>
-     On insèrera ici les éléments de notre formulaire.
+     On insèrera ici les éléments de notre formulaire. 
  </p>
+  <?php
+   echo $prenom
+   ?>
   
  </form>
 

@@ -1,5 +1,8 @@
 * {
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  color: red;
 }
 
 .container {
@@ -40,6 +43,10 @@ h2 {
   background-size: cover;
   background-position: center;
   min-width: 100%;
+  min-height: 100vh;
+}
+
+#about {
   min-height: 100vh;
 }
 /*# sourceMappingURL=style.css.map */

@@ -97,40 +97,39 @@
 <!-- *********************************************-- SECTION ECRAN 2 FIN *********************************************-->
 
 
-<!-- *********************************************-- SECTION ECRAN 3 START *********************************************-->
-<section id="produit" >
+<!-- *********************************************-- SECTION CARROUSSEL 3 START *********************************************-->
 
-  
-  <div class="carousel">
-    <a class="carousel-item" href="#one!"><img src="assets/img/Back_logo.jpg"></a>
-    <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/250/250/nature/2"></a>
-    <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/250/250/nature/3"></a>
-    <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/250/250/nature/4"></a>
-    <a class="carousel-item" href="#five!"><img src="https://lorempixel.com/250/250/nature/5"></a>
+<div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="assets/img/gros-plan.jpg" alt= "robot_car"> 
+        <div class="caption center-align"></div>
+      </li>
+      <li>
+        <img src="assets/img/borne.jpg"> 
+        <div class="caption left-align"></div>
+      </li>
+      <li>
+        <img src="assets/img/ras3.jpg"> 
+        <div class="caption right-align"></div>
+      </li>
+      <li>
+        <img src="assets/img/nitendo.jpg"> 
+        <div class="caption center-align"></div>
+      </li>
+    </ul>
   </div>
 
-  <script>
-$(document).ready(function() {
-	$('.carousel').carousel();
-});
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    let elems = document.querySelectorAll('.slider');
+    let instances = M.Slider.init(elems);
+  });
 </script>
-</section>
+        
 
+<!-- *********************************************-- SECTION CARROUSSEL 3 FIN *********************************************-->
  
-
-
-  
-
-
-
-
-<!-- *********************************************-- SECTION ECRAN 3 FIN *********************************************-->
-
-
-
-  
-
-  
 <!-- *********************************************-- SECTION FORMULAIRE *********************************************-->
 
 
@@ -234,9 +233,42 @@ $(document).ready(function() {
 
 
 <!-- *********************************************-- SECTION ABOUT US START *********************************************-->
-<section id="about">
+<section id="about" class="row ">
   <h2>QUI NOUS SOMMES</h2>
+
+  <div class="col s12 m6 l6 ">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s2">
+              <img src="assets/img/LorenzoMoche.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+            </div>
+            <div class="col s10">
+              <span class="black-text">
+                This is a square image. Add the "circle" class to it to make it appear circular.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m6 l6 ">
+        <div class="card-panel grey lighten-5 z-depth-1">
+          <div class="row valign-wrapper">
+            <div class="col s2">
+              <img src="assets/img/GabyMoche.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+            </div>
+            <div class="col s10">
+              <span class="black-text">
+                This is a square image. Add the "circle" class to it to make it appear circular.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
 </section>
+
 
 <!-- *********************************************-- SECTION ABOUT US END *********************************************-->
 

@@ -52,7 +52,9 @@ h2{
 
 // FORMULAIRE TEST //
 
-form .fake{display:none}
+form .fake{
+    display:none;
+}
 input:invalid {
     box-shadow: 0 0 5px 1px red;
   }

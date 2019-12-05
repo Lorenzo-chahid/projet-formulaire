@@ -1,9 +1,12 @@
 // TEMPLATE FOR ALL //
 *{
-    scroll-behavior: smooth;
-    
+    scroll-behavior: smooth;  
+   
 }
-
+nav{
+    position: fixed;
+    z-index: 999;
+}
 .container{
     min-width: 100%;
 }
@@ -22,6 +25,7 @@ h2{
 
 
 #center{
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: flex-end;
@@ -45,3 +49,34 @@ h2{
 
 //PRESENTATION HACKERS POULETTE// 
 
+
+// FORMULAIRE TEST //
+
+form .fake{display:none}
+input:invalid {
+    box-shadow: 0 0 5px 1px red;
+  }
+  
+  input:focus:invalid {
+    outline: none;
+  }
+
+input[type=text],
+input[type=email],
+input[type=number],
+textarea,
+fieldset {
+/* requis pour composer de manière appropriée les éléments
+   de formulaire sur les navigateurs fondés sur WebKit */
+  -webkit-appearance: none;
+  
+  width : 100%;
+  border: 1px solid #333;
+  margin: 0;
+  
+  font-family: inherit;
+  font-size: 90%;
+  
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}

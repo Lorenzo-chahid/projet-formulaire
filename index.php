@@ -31,7 +31,7 @@
              <section id=#home>
             <nav>
                 <div class="nav-wrapper teal lighten-2">
-                <a href="#" class="brand-logo"><img src="assets/img/Back_logo.jpg" alt="petit_logo_blanc" id="logoImg"/> </a>
+                <a href="#" class="brand-logo"><img src="assets/img/logo_blanc.png" alt="petit_logo_blanc" id="logoImg"/> </a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="#home"><i class="material-icons">search</i></a></li>
                     <li><a href="#base"><i class="material-icons">directions_walk</i></a></li>
@@ -138,34 +138,39 @@ $(document).ready(function() {
 
 
   <h4>Inscrivez-vous pour les informations relatives à la formation : </h4>
-    <form name="inscription" method="post" >
+    <form name="inscription" method="post" onsubmit="validate()" >
       <div class="row">
         <form class="col s12">
           <div class="row">
             <div class="input-field col s6">
-              <input id="prenom" type="text" class="validate" name="firstName">
+              <div class="fake"><input name="fake-field"></div>
+              <input id="prenom" type="text" class="validate" name="firstName" required pattern="^[A-Za-zÀ-ÿ ,.'-]+$"> <!--pattern="^[A-Za-zÀ-ÿ ,.'-]+$"-->
               <label for="prenom">Prénom</label>
+              
             </div>
             <div class="input-field col s6">
-              <input id="nom" type="text" class="validate" name="secondName">
+              <div class="fake"><input name="fake-field"></div>
+              <input id="nom" type="text" class="validate" name="secondName" required>
               <label for="nom">Nom</label>
             </div>
           </div>
             <div class="row">
               <div class="input-field col s12">
-                <input  id="ville" type="text" class="validate" name="ville">
+                <div class="fake"><input name="fake-field"></div>
+                <input  id="ville" type="text" class="validate" name="ville" required>
                 <label for="ville">Ville</label>
               </div>
             </div>
           </div>
             <div class="row">
               <div class="input-field col s12">
-                <input id="email" type="email" class="validate" name="idEmail">
+                <div class="fake"><input name="fake-field"></div>
+                <input id="email" type="email" class="validate" name="idEmail" required>
                 <label for="email">Email</label>
               </div>
             </div>
             <div>
-              <button class="btn waves-effect waves-light" type="submit" name="sendemail">Submit
+              <button class="btn waves-effect waves-light" type="submit" name="sendemail" id="submit">Submit
                 <i class="material-icons right">send</i>
               </button>  
             </div>
@@ -178,6 +183,7 @@ $(document).ready(function() {
 
     <!--PHP DU FORMULAIRE -->
 <?php
+   
 
 
     require 'vendor/autoload.php'; // If you're using Composer (recommended)
@@ -213,14 +219,31 @@ $(document).ready(function() {
     
      try {
          $response = $sendgrid->send($email);
-        print $response->statusCode() . "\n";
-        print_r($response->headers());
-        print $response->body() . "\n";
+        //print $response->statusCode() . "\n";
+        //print_r($response->headers());
+        //print $response->body() . "\n";
         echo "SEND EMAIL WITH SUCCES";
      } catch (Exception $e) {
         echo 'Caught exception: '. $e->getMessage() ."\n";
      }
     }
+
+    try{
+      $bdd = new PDO('mysql:host=localhost;dbname=form_php;charset=utf8', 'root', 'root');
+    } catch(Exception $e) {
+        die('Erreur : '.$e->getMessage());
+    }
+    
+    $req = $bdd->prepare('INSERT INTO hackers_poulette(nom, prenom, ville, email) VALUES(:nom, :prenom, :ville, :email)');
+    $req->execute(array(
+        'nom' => $name = $_POST["firstName"],
+        'prenom' => $secondName = $_POST["secondName"],
+        'ville' => $city = $_POST["ville"],
+        'email' => $mail = $_POST["idEmail"],
+        
+        ));
+    
+    echo 'Les données ont bien été ajouté !';
 
 
 
@@ -278,6 +301,7 @@ $(document).ready(function() {
    
    
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   <script src="assets/js/script.js"></script>
    
 </body>
 </html>

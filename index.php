@@ -31,12 +31,12 @@
              <section id=#home>
             <nav>
                 <div class="nav-wrapper teal lighten-2">
-                <a href="#" class="brand-logo"><img src="assets/img/logo_blanc.png" alt="petit_logo_blanc" id="logoImg"/> </a>
+                <a href="#infoclub" class="brand-logo"><img src="assets/img/logo_blanc.png" alt="petit_logo_blanc" id="logoImg"/> </a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="#home"><i class="material-icons">search</i></a></li>
                     <li><a href="#base"><i class="material-icons">directions_walk</i></a></li>
                     <li><a href="#produit"><i class="material-icons">add_shopping_cart</i></a></li>
-                    <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
+                    <li><a href="#infoclub"><i class="material-icons">more_vert</i></a></li>
                 </ul>
                 </div>
             </nav>
@@ -48,7 +48,7 @@
           <div class="row">
           <div class="col s12  cyan darken-3 "id="background" >
               <div id="center">
-              <a class="waves-effect waves-light btn-large pulse tooltip" id="callTo" >REJOINGEZ NOUS</a>
+              <a href="#i"class="waves-effect waves-light btn-large pulse tooltip" id="callTo" >REJOINGEZ NOUS</a>
               </div>
           </div>
         </section>
@@ -101,19 +101,7 @@
 <section id="produit" >
 
   
-  <div class="carousel">
-    <a class="carousel-item" href="#one!"><img src="assets/img/Back_logo.jpg"></a>
-    <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/250/250/nature/2"></a>
-    <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/250/250/nature/3"></a>
-    <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/250/250/nature/4"></a>
-    <a class="carousel-item" href="#five!"><img src="https://lorempixel.com/250/250/nature/5"></a>
-  </div>
-
-  <script>
-$(document).ready(function() {
-	$('.carousel').carousel();
-});
-</script>
+  
 </section>
 
  
@@ -133,12 +121,12 @@ $(document).ready(function() {
   
 <!-- *********************************************-- SECTION FORMULAIRE *********************************************-->
 
-
+<section id="infoclub">
 
 
 
   <h4>Inscrivez-vous pour les informations relatives à la formation : </h4>
-    <form name="inscription" method="post" onsubmit="validate()" >
+    <form name="inscription" method="post"  >
       <div class="row">
         <form class="col s12">
           <div class="row">
@@ -174,11 +162,12 @@ $(document).ready(function() {
                 <i class="material-icons right">send</i>
               </button>  
             </div>
+            <div class="g-recaptcha" data-sitekey="6Le1VcYUAAAAAJlLO7qGLJ3fauBNMlMOwDmHJJAF"></div>
         </form>
       </div>
     </form>
 
-
+</section>
 
 
     <!--PHP DU FORMULAIRE -->
@@ -195,55 +184,63 @@ $(document).ready(function() {
     // replacing <PATH TO> with the path to the sendgrid-php.php file,
     // which is included in the download:
     // https://github.com/sendgrid/sendgrid-php/releases
-
-    if(isset($_POST["sendemail"])){
-      $name = $_POST["firstName"];
-      $secondName = $_POST["secondName"];
-      $city = $_POST["ville"];
-      $mail = $_POST["idEmail"];
-
-      $email = new \SendGrid\Mail\Mail(); 
-      $email->setFrom("chahid.lorenzo@outlook.com", "Lorenzo");
-      $email->setSubject("Sending with SendGrid is Fun");
-      $email->addTo($mail, $name);
-      $email->addContent("text/plain", "and easy to do anywhere, even with PHP");
-      $email->addContent(
-          "text/html", "<strong>and easy to do anywhere, even with PHP</strong>"
-      );
-      $sendgrid = new \SendGrid(getenv("SENDGRID_API_KEY"));
-      //if($sendgrid->send($email)){
-       // echo " Email sent SuccessFully";
-      //}else{
-      //  echo "errors";
-      //}
+  
+      if(isset($_POST['fake-field']) && $_POST['fake-field'] != ''){
+                header('Location: http://www.monsite.com/fake-confirmation/');
+                exit('Redirecting you to http://www.monsite.com/fake-confirmation/');
+      } else {
+        if(isset($_POST["sendemail"])){
+          $name = $_POST["firstName"];
+          $secondName = $_POST["secondName"];
+          $city = $_POST["ville"];
+          $mail = $_POST["idEmail"];
     
-     try {
-         $response = $sendgrid->send($email);
-        //print $response->statusCode() . "\n";
-        //print_r($response->headers());
-        //print $response->body() . "\n";
-        echo "SEND EMAIL WITH SUCCES";
-     } catch (Exception $e) {
-        echo 'Caught exception: '. $e->getMessage() ."\n";
-     }
-    }
-
-    try{
-      $bdd = new PDO('mysql:host=localhost;dbname=form_php;charset=utf8', 'root', 'root');
-    } catch(Exception $e) {
-        die('Erreur : '.$e->getMessage());
-    }
-    
-    $req = $bdd->prepare('INSERT INTO hackers_poulette(nom, prenom, ville, email) VALUES(:nom, :prenom, :ville, :email)');
-    $req->execute(array(
-        'nom' => $name = $_POST["firstName"],
-        'prenom' => $secondName = $_POST["secondName"],
-        'ville' => $city = $_POST["ville"],
-        'email' => $mail = $_POST["idEmail"],
+          $email = new \SendGrid\Mail\Mail(); 
+          $email->setFrom("chahid.lorenzo@outlook.com", "Lorenzo");
+          $email->setSubject("Sending with SendGrid is Fun");
+          $email->addTo($mail, $name);
+          $email->addContent("text/plain", "and easy to do anywhere, even with PHP");
+          $email->addContent(
+              "text/html", "<strong>and easy to do anywhere, even with PHP</strong>"
+          );
+          $sendgrid = new \SendGrid(getenv("SENDGRID_API_KEY"));
+          //if($sendgrid->send($email)){
+           // echo " Email sent SuccessFully";
+          //}else{
+          //  echo "errors";
+          //}
         
-        ));
+         try {
+             $response = $sendgrid->send($email);
+            //print $response->statusCode() . "\n";
+            //print_r($response->headers());
+            //print $response->body() . "\n";
+            echo "SEND EMAIL WITH SUCCES";
+         } catch (Exception $e) {
+            echo 'Caught exception: '. $e->getMessage() ."\n";
+         }
+        }
     
-    echo 'Les données ont bien été ajouté !';
+        try{
+          $bdd = new PDO('mysql:host=localhost;dbname=form_php;charset=utf8', 'root', 'root');
+        } catch(Exception $e) {
+            die('Erreur : '.$e->getMessage());
+        }
+        
+        $req = $bdd->prepare('INSERT INTO hackers_poulette(nom, prenom, ville, email) VALUES(:nom, :prenom, :ville, :email)');
+        $req->execute(array(
+            'nom' => $name = $_POST["firstName"],
+            'prenom' => $secondName = $_POST["secondName"],
+            'ville' => $city = $_POST["ville"],
+            'email' => $mail = $_POST["idEmail"],
+            
+            ));
+        
+        echo 'Les données ont bien été ajouté !';
+      
+      }
+
+    
 
 
 
@@ -297,9 +294,10 @@ $(document).ready(function() {
     
 </section>
 
+    
 
    
-   
+   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
    <script src="assets/js/script.js"></script>
    

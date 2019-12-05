@@ -14,8 +14,12 @@
         <link rel="stylesheet" href="assets/css/style.css">
        <!-- Compiled and minified CSS -->
         <!-- Compiled and minified CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Compiled and minified CSS -->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
      
 
         
@@ -27,7 +31,7 @@
              <section id=#home>
             <nav>
                 <div class="nav-wrapper teal lighten-2">
-                <a href="#!" class="brand-logo"><img src="assets/charte/assets/img/logo_blanc.png" alt="petit_logo_blanc" id="logoImg"/> </a>
+                <a href="#" class="brand-logo"><img src="assets/img/Back_logo.jpg" alt="petit_logo_blanc" id="logoImg"/> </a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="#home"><i class="material-icons">search</i></a></li>
                     <li><a href="#base"><i class="material-icons">directions_walk</i></a></li>
@@ -94,44 +98,27 @@
 
 
 <!-- *********************************************-- SECTION ECRAN 3 START *********************************************-->
-<section id="produit">
+<section id="produit" >
+
   
-<div >
-        <h2>Third Slide</h2>
-        <p class="white-text">Etiam porta sem malesuada magna mollis euismod.</p>
-      </div>  
-    </div>
-    <div class="carousel-item blue white-text" href="#four!">
-      <div class="container">
-        <h2>Fourth Slide</h2>
-        <p class="white-text">Etiam porta sem malesuada magna mollis euismod.</p>
-      </div>  
-    </div>
+  <div class="carousel">
+    <a class="carousel-item" href="#one!"><img src="assets/img/Back_logo.jpg"></a>
+    <a class="carousel-item" href="#two!"><img src="https://lorempixel.com/250/250/nature/2"></a>
+    <a class="carousel-item" href="#three!"><img src="https://lorempixel.com/250/250/nature/3"></a>
+    <a class="carousel-item" href="#four!"><img src="https://lorempixel.com/250/250/nature/4"></a>
+    <a class="carousel-item" href="#five!"><img src="https://lorempixel.com/250/250/nature/5"></a>
   </div>
+
+  <script>
+$(document).ready(function() {
+	$('.carousel').carousel();
+});
+</script>
 </section>
 
  
 
- <script>
-   // CAROUSEL
-$(document).ready(function(){
-  $('.carousel').carousel(
-  {
-    dist: 0,
-    padding: 0,
-    fullWidth: true,
-    indicators: true,
-    duration: 100,
-  }
-  );
-});
 
-autoplay()   
-function autoplay() {
-    $('.carousel').carousel('next');
-    setTimeout(autoplay, 4500);
-}
-</script>
   
 
 

@@ -2,7 +2,6 @@
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
-  color: red;
 }
 
 .container {
@@ -48,5 +47,24 @@ h2 {
 
 #about {
   min-height: 100vh;
+  background: #303030;
+}
+
+#moche {
+  min-height: 70vh;
+}
+
+#picture_ugly {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 30vh;
+  min-width: 30vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 /*# sourceMappingURL=style.css.map */

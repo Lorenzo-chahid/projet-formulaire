@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <section id="about" class="row ">
   <h2>QUI NOUS SOMMES</h2>
 
-  <div class="col s12 m6 l6 ">
+  <div class="col s12 m6 l6 " id="moche">
         <div class="card-panel grey lighten-5 z-depth-1">
           <div class="row valign-wrapper">
             <div class="col s2">
@@ -251,11 +251,13 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
       </div>
 
-      <div class="col s12 m6 l6 ">
+      <div class="col s12 m6 l6 " >
         <div class="card-panel grey lighten-5 z-depth-1">
           <div class="row valign-wrapper">
-            <div class="col s2">
-              <img src="assets/img/GabyMoche.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+            <div class="col s2" id="moche">
+              <div id="picture_ugly">
+                <img src="assets/img/GabyMoche.jpg"  alt="photo_grimace_fille" class="circle responsive-img"> <!-- notice the "circle" class -->
+              </div>
             </div>
             <div class="col s10">
               <span class="black-text">

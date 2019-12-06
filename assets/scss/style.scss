@@ -3,7 +3,7 @@
     scroll-behavior: smooth;
     margin:0;
     padding: 0;
-    color: red;
+
 }
 
 .container{
@@ -48,4 +48,19 @@ h2{
 //PRESENTATION HACKERS POULETTE// 
 #about{
     min-height: 100vh;
+    background: #303030;
+}
+#moche{
+
+    min-height: 70vh;
+
+}
+
+#picture_ugly{
+    display: flex;
+    min-height: 30vh;
+    min-width: 30vh;
+    align-items: center;
+    justify-content: center;
+    
 }

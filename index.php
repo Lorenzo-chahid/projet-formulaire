@@ -211,7 +211,7 @@
           //}
         
          try {
-             $response = $sendgrid->send($email);
+             $response = $sendgrid->setTemplateId(getenv(ID_KEY));
             //print $response->statusCode() . "\n";
             //print_r($response->headers());
             //print $response->body() . "\n";

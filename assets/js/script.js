@@ -1,5 +1,10 @@
 (()=>{
 
+  document.addEventListener('DOMContentLoaded', function() {
+    let elems = document.querySelectorAll('.slider');
+    let instances = M.Slider.init(elems);
+  });
+
   document.getElementById("submit").addEventListener("click", ()=>{
     let emailTry = document.getElementById('email').value;
     let nameTry = document.getElementById('prenom').value;

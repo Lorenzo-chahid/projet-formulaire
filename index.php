@@ -120,12 +120,7 @@
     </ul>
   </div>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    let elems = document.querySelectorAll('.slider');
-    let instances = M.Slider.init(elems);
-  });
-</script>
+
         
 
 <!-- *********************************************-- SECTION CARROUSSEL 3 FIN *********************************************-->

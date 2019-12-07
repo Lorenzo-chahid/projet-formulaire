@@ -1,5 +1,5 @@
 (()=>{
-/*
+
   document.getElementById("submit").addEventListener("click", ()=>{
     let emailTry = document.getElementById('email').value;
     let nameTry = document.getElementById('prenom').value;
@@ -14,7 +14,7 @@
     alert("email:"+emailResult );
   })
   
-  */
+  
 
 
  document.getElementById("sendemail").addEventListener("click", ()=>{

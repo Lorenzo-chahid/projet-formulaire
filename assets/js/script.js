@@ -49,7 +49,7 @@
  } 
 })
 
- /*var form  = document.getElementsByTagName('form')[0];
+ var form  = document.getElementsByTagName('form')[0];
  var email = document.getElementById('mail');
  var error = document.querySelector('.error');
  
@@ -75,5 +75,5 @@
      event.preventDefault();
    }
  }, false);
-*/
+
 })()

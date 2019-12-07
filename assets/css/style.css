@@ -56,7 +56,6 @@ h2 {
   min-height: 100vh;
 }
 
-<<<<<<< HEAD
 #about {
   min-height: 105vh;
   background: #303030;
@@ -120,7 +119,7 @@ h2 {
 
 #search {
   background-color: #4db6ac;
-=======
+}
 form .fake {
   display: none;
 }
@@ -149,6 +148,5 @@ fieldset {
   font-size: 90%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
->>>>>>> lorenzo-dev
 }
 /*# sourceMappingURL=style.css.map */

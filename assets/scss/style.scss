@@ -1,7 +1,13 @@
 // TEMPLATE FOR ALL //
 *{
     scroll-behavior: smooth;
-    
+    margin:0;
+    padding: 0;
+   
+
+}
+h2{
+    color:#4db6ac ;
 }
 
 .container{
@@ -11,44 +17,31 @@ h1{
     text-align: center;
     color: white;
 }
-// BASE //
 
-
-// IMAGE **************//
+h2{
+    text-align: center;
+}
 
 #logoImg{
     width: 5rem;
 }
 
-.imgBase{
-    width: 15rem;
-    height: 15rem;
-}
-
-.card-image{
-    width: 5rem;
-    height: 5rem;
-}
-
-
 
 #center{
-
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 9rem;
+    width: 50%;
+    margin: auto;
     
-   display: flex;
-   flex-direction: column;
-   padding-bottom: 9rem;
-   justify-content: flex-end;
-   align-items: center;
-   min-height: 100vh;
- 
    
 }
 
 
  // IMAGE-BACKGROUND //
 #background{
-    background-image: url("../charte/assets/img/back_logo.jpg");
+    background-image: url("../img/Back_logo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -56,42 +49,67 @@ h1{
     min-height: 100vh;
 }
 
-// tooltip //
-.tooltip {
-    position: relative;
-    display: inline-block;
-    border-bottom: 1px dotted black;
-  }
-  
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: #555;
-    color: #fff;
+//PRESENTATION HACKERS POULETTE// 
+#about{
+    min-height: 105vh;
+    background: #303030;
+    margin-top: 5rem;
+    padding-top: 5rem;
+}
+.moche{
+
+    min-height: 60vh;
+    background-color: chocolate;
+
+}
+
+#photoFille{
+
+    display: flex;
+    min-height: 10vh;
+    min-width: 10vh;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#photoGars{
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.moche2{
+    min-height: 1000px;
+    background-color: cornflowerblue;
+}
+
+.testii{
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.black-text{
+    
+    margin:auto;
+   
+    background-color: green;
+    
+    h4{
+        text-align: center;
+    
+    }
+    
+}
+
+.txtImg{
     text-align: center;
-    border-radius: 6px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -60px;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  
-  .tooltip .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #555 transparent transparent transparent;
-  }
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-  }
-  
+}
+
+#search{
+
+    background-color: #4db6ac ;
+}

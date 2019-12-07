@@ -1,6 +1,11 @@
 * {
   scroll-behavior: smooth;
-  color: chartreuse;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  color: #4db6ac;
 }
 
 .container {
@@ -12,40 +17,31 @@ h1 {
   color: white;
 }
 
+h2 {
+  text-align: center;
+}
+
 #logoImg {
   width: 5rem;
-}
-
-.imgBase {
-  width: 5rem;
-  height: 5rem;
-}
-
-.card-image {
-  width: 5rem;
-  height: 5rem;
 }
 
 #center {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   padding-bottom: 9rem;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  min-height: 100vh;
+  width: 50%;
+  margin: auto;
 }
 
 #background {
-  background-image: url("../charte/assets/img/back_logo.jpg");
+  background-image: url("../img/Back_logo.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -53,48 +49,68 @@ h1 {
   min-height: 100vh;
 }
 
-<<<<<<< HEAD
-.tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
+#about {
+  min-height: 105vh;
+  background: #303030;
+  margin-top: 5rem;
+  padding-top: 5rem;
 }
 
-.tooltip .tooltiptext {
-  visibility: hidden;
-  width: 120px;
-  background-color: #555;
-  color: #fff;
+.moche {
+  min-height: 60vh;
+  background-color: chocolate;
+}
+
+#photoFille {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 10vh;
+  min-width: 10vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#photoGars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.moche2 {
+  min-height: 1000px;
+  background-color: cornflowerblue;
+}
+
+.testii {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.black-text {
+  margin: auto;
+  background-color: green;
+}
+
+.black-text h4 {
   text-align: center;
-  border-radius: 6px;
-  padding: 5px 0;
-  position: absolute;
-  z-index: 1;
-  bottom: 125%;
-  left: 50%;
-  margin-left: -60px;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
 }
 
-.tooltip .tooltiptext::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
+.txtImg {
+  text-align: center;
 }
 
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
-=======
-.card-image {
-  width: 20px;
->>>>>>> master
+#search {
+  background-color: #4db6ac;
 }
 /*# sourceMappingURL=style.css.map */

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -13,8 +14,13 @@
         <link rel="stylesheet" href="assets/css/style.css">
        <!-- Compiled and minified CSS -->
         <!-- Compiled and minified CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!-- Compiled and minified CSS -->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+
+     
 
         
     </head>
@@ -22,13 +28,14 @@
         
         <section class="container"> <!-- Page Content goes here -->
              <!-- NAVBAR  START-->
+             <section id=#home>
             <nav>
                 <div class="nav-wrapper teal lighten-2">
-                <a href="#!" class="brand-logo"><img src="assets/charte/assets/img/logo_blanc.png" alt="petit_logo_blanc" id="logoImg"/> </a>
+                <a href="#" class="brand-logo"><img src="assets/img/Back_logo.jpg" alt="petit_logo_blanc" id="logoImg"/> </a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="#base"><i class="material-icons">search</i></a></li>
-                    <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
-                    <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
+                    <li><a href="#home"><i class="material-icons">search</i></a></li>
+                    <li><a href="#base"><i class="material-icons">directions_walk</i></a></li>
+                    <li><a href="#produit"><i class="material-icons">add_shopping_cart</i></a></li>
                     <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
                 </ul>
                 </div>
@@ -37,33 +44,25 @@
              <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <div class="row">
-        <div class="col s12  cyan darken-3 "id="background" >
-            <div id="center">
-            <a class="waves-effect waves-light btn-large pulse tooltip" id="callTo" >REJOINGEZ NOUS</a>
-            <span class="tooltiptext">C'est l'éclate !</span>
-            </div>
-        </div>
-        <div class="col s12 m4 l2 cyan darken-3"><p>s12 m4</p></div>
-        <div class="col s12 m4 l8 cyan darken-2"><p>s12 m4</p></div>
-        <div class="col s12 m4 l2 cyan darken-1"><p>s12 m4</p></div>
-    </div>
-    <div class="row">
-        <div class="col s12 m6 l3 cyan darken-3"><p>s12 m6 l3</p></div>
-        <div class="col s12 m6 l3 cyan darken-3"><p>s12 m6 l3</p></div>
-        <div class="col s12 m6 l3 cyan darken-3"><p>s12 m6 l3</p></div>
-        <div class="col s12 m6 l3 cyan darken-3"><p>s12 m6 l3</p></div>
-    </div>
+        
+          <div class="row">
+          <div class="col s12  cyan darken-3 "id="background" >
+              <div id="center">
+              <a class="waves-effect waves-light btn-large pulse tooltip" id="callTo" >REJOINGEZ NOUS</a>
+              </div>
+          </div>
+        </section>
+    
 
 
-    <!-- *********************************************-- SECTION ECRAN 2 START *********************************************-->
-    <section id="base">
+<!-- *********************************************-- SECTION ECRAN 2 START *********************************************-->
+    <section class="row" id="base">
 
-      <div class="col s12 m7">
+      <div class="col s12 m12">
       
         <div class="card horizontal">
           <div class="card-image">
-            <img src="assets/charte/assets/img/mimi_car.jpeg" alt="mini car pink" class="imgBase">
+            <img src="assets/img/mimi_car.jpeg" alt="mini car pink" class="imgBase">
           </div>
           <div class="card-stacked">
             <div class="card-content">
@@ -77,7 +76,7 @@
       </div>
 
       <!-- DEUXIEME ARTICLE -->
-      <div class="col s12 m7">
+      <div class="col s12 m12">
       
         <div class="card horizontal">
           <div class="card-stacked">
@@ -89,52 +88,83 @@
             </div>
           </div>
           <div class="card-image">
-            <img src="assets/charte/assets/img/card.jpeg" alt="raspberry pi card" class="imgBase">
+            <img src="assets/img/card.jpeg" alt="raspberry pi card" class="imgBase">
           </div>
         </div>
       </div>
  
     </section>
-  <!-- *********************************************-- SECTION ECRAN 2 FIN *********************************************-->
+<!-- *********************************************-- SECTION ECRAN 2 FIN *********************************************-->
 
 
-  <!-- *********************************************-- SECTION ECRAN 3 START *********************************************-->
+<!-- *********************************************-- SECTION CARROUSSEL 3 START *********************************************-->
+
+<div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="assets/img/gros-plan.jpg" alt= "robot_car"> 
+        <div class="caption center-align"></div>
+      </li>
+      <li>
+        <img src="assets/img/borne.jpg"> 
+        <div class="caption left-align"></div>
+      </li>
+      <li>
+        <img src="assets/img/ras3.jpg"> 
+        <div class="caption right-align"></div>
+      </li>
+      <li>
+        <img src="assets/img/nitendo.jpg"> 
+        <div class="caption center-align"></div>
+      </li>
+    </ul>
+  </div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    let elems = document.querySelectorAll('.slider');
+    let instances = M.Slider.init(elems);
+  });
+</script>
+        
+
+<!-- *********************************************-- SECTION CARROUSSEL 3 FIN *********************************************-->
+ 
+<!-- *********************************************-- SECTION FORMULAIRE *********************************************-->
 
 
 
-  
 
-  <!--FORMULAIRE HTML -->
 
   <h4>Inscrivez-vous pour les informations relatives à la formation : </h4>
-    <form name="inscription" method="post" action="saisie.php">
+    <form name="inscription" method="post" >
       <div class="row">
         <form class="col s12">
           <div class="row">
             <div class="input-field col s6">
-              <input id="prenom" type="text" class="validate">
+              <input id="prenom" type="text" class="validate" name="firstName">
               <label for="prenom">Prénom</label>
             </div>
             <div class="input-field col s6">
-              <input id="nom" type="text" class="validate">
+              <input id="nom" type="text" class="validate" name="secondName">
               <label for="nom">Nom</label>
             </div>
           </div>
             <div class="row">
               <div class="input-field col s12">
-                <input  id="ville" type="text" class="validate">
+                <input  id="ville" type="text" class="validate" name="ville">
                 <label for="ville">Ville</label>
               </div>
             </div>
           </div>
             <div class="row">
               <div class="input-field col s12">
-                <input id="email" type="email" class="validate">
+                <input id="email" type="email" class="validate" name="idEmail">
                 <label for="email">Email</label>
               </div>
             </div>
             <div>
-              <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+              <button class="btn waves-effect waves-light" type="submit" name="sendemail">Submit
                 <i class="material-icons right">send</i>
               </button>  
             </div>
@@ -144,26 +174,98 @@
 
 
 
+
     <!--PHP DU FORMULAIRE -->
-  <?php
-    $prenom = $_POST ["prenom"]; 
-    $nom = $_POST["nom"]; 
-    $ville = $_POST["ville"]; 
-    $email = $_POST["email"];
+<?php
 
-    //Tableau message d'erreur 
 
+    require 'vendor/autoload.php'; // If you're using Composer (recommended)
     
+    // Comment out the above line if not using Composer
+    //require("sendgrid-php/sendgrid-php.php");
+    // If not using Composer, uncomment the above line and
+    // download sendgrid-php.zip from the latest release here,
+    // replacing <PATH TO> with the path to the sendgrid-php.php file,
+    // which is included in the download:
+    // https://github.com/sendgrid/sendgrid-php/releases
 
-    if (isset ($prenom)&& isset($nom)&& isset($ville)&& isset($email)){
-      if (($prenom == true)&& ($nom == true) && ($ville==true) && ($email==true)){
-        echo " Coucou $prenom, $nom, de $ville, adresse mail: $email";
-      }
-      
+    if(isset($_POST["sendemail"])){
+      $name = $_POST["firstName"];
+      $secondName = $_POST["secondName"];
+      $city = $_POST["ville"];
+      $mail = $_POST["idEmail"];
+
+      $email = new \SendGrid\Mail\Mail(); 
+      $email->setFrom("chahid.lorenzo@outlook.com", "Lorenzo");
+      $email->setSubject("Sending with SendGrid is Fun");
+      $email->addTo($mail, $name);
+      $email->addContent("text/plain", "and easy to do anywhere, even with PHP");
+      $email->addContent(
+          "text/html", "<strong>and easy to do anywhere, even with PHP</strong>"
+      );
+      $sendgrid = new \SendGrid(getenv("SENDGRID_API_KEY"));
+      //if($sendgrid->send($email)){
+       // echo " Email sent SuccessFully";
+      //}else{
+      //  echo "errors";
+      //}
+    
+     try {
+         $response = $sendgrid->send($email);
+        print $response->statusCode() . "\n";
+        print_r($response->headers());
+        print $response->body() . "\n";
+        echo "SEND EMAIL WITH SUCCES";
+     } catch (Exception $e) {
+        echo 'Caught exception: '. $e->getMessage() ."\n";
+     }
     }
 
-  ?>
 
+
+?>
+  
+
+<!-- SEND EMAIL BY SENDGRID -->
+
+
+<!-- *********************************************-- SECTION FORMULAIRE FIN *********************************************-->
+
+
+<!-- *********************************************-- SECTION ABOUT US START *********************************************-->
+<section id="about" class="row">
+  <h2>QUI SOMMMES-NOUS</h2>
+
+  <div class="col s12 m6 l6 " class="moche2">
+      <div class="card-panel grey lighten-5 ">
+          <img src="assets/img/GabyMoche.jpg" alt="photo_grimace_fille" id="photoFille"class="circle responsive-img"> <!-- notice the "circle" class -->
+          <div class="black-text">
+          <h4>CEO-Lorenzo</h4>
+          <p class="txtImg">Formé chez Becode, il a vite développé son talent de CEO. Il a par la suite ouvert ce site de vente et formation.</p>
+        </div>
+      </div>
+        
+  </div>
+
+  <div class="col s12 m6 l6 " class="moche2">
+      <div class="card-panel grey lighten-5 ">
+          <img src="assets/img/LorenzoMoche.jpg" alt="photo_grimace_garçon" id="photoGars" class="circle responsive-img"> <!-- notice the "circle" class -->
+          <div class="black-text">
+          <h4>CEO-Lorenzo</h4>
+          <p class="txtImg">Formé chez Becode, il a vite développé son talent de CEO. Il a par la suite ouvert ce site de vente et formation.</p>
+        </div>
+      </div>
+        
+  </div>
+
+  
+
+      
+      
+</section>
+
+
+<!-- *********************************************-- SECTION ABOUT US END *********************************************-->
 
     <!-- FOOTER -->
     <footer class="page-footer" id="search">
@@ -186,7 +288,7 @@
           </div>
           <div class="footer-copyright">
             <div class="container">
-            © 2014 Copyright Text
+            © 2019 Hackers Poulette
             <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             </div>
           </div>
@@ -198,8 +300,11 @@
         
     
 </section>
-            
-        <script src="" async defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    </body>
+
+
+   
+   
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   
+</body>
 </html>

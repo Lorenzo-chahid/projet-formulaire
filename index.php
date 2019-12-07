@@ -31,12 +31,12 @@
              <section id=#home>
             <nav>
                 <div class="nav-wrapper teal lighten-2">
-                <a href="#" class="brand-logo"><img src="assets/img/Back_logo.jpg" alt="petit_logo_blanc" id="logoImg"/> </a>
+                <a href="#infoclub" class="brand-logo"><img src="assets/img/logo_blanc.png" alt="petit_logo_blanc" id="logoImg"/> </a>
                 <ul class="right hide-on-med-and-down">
                     <li><a href="#home"><i class="material-icons">search</i></a></li>
                     <li><a href="#base"><i class="material-icons">directions_walk</i></a></li>
                     <li><a href="#produit"><i class="material-icons">add_shopping_cart</i></a></li>
-                    <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
+                    <li><a href="#infoclub"><i class="material-icons">more_vert</i></a></li>
                 </ul>
                 </div>
             </nav>
@@ -48,7 +48,7 @@
           <div class="row">
           <div class="col s12  cyan darken-3 "id="background" >
               <div id="center">
-              <a class="waves-effect waves-light btn-large pulse tooltip" id="callTo" >REJOINGEZ NOUS</a>
+              <a href="#i"class="waves-effect waves-light btn-large pulse tooltip" id="callTo" >REJOINGEZ NOUS</a>
               </div>
           </div>
         </section>
@@ -132,51 +132,58 @@ document.addEventListener('DOMContentLoaded', function() {
  
 <!-- *********************************************-- SECTION FORMULAIRE *********************************************-->
 
-
+<section id="infoclub">
 
 
 
   <h4>Inscrivez-vous pour les informations relatives à la formation : </h4>
-    <form name="inscription" method="post" >
+    <form name="inscription" method="post"  >
       <div class="row">
         <form class="col s12">
           <div class="row">
             <div class="input-field col s6">
-              <input id="prenom" type="text" class="validate" name="firstName">
+              <div class="fake"><input name="fake-field"></div>
+              <input id="prenom" type="text" class="validate" name="firstName" required pattern="^[A-Za-zÀ-ÿ ,.'-]+$"> <!--pattern="^[A-Za-zÀ-ÿ ,.'-]+$"-->
               <label for="prenom">Prénom</label>
+              
             </div>
             <div class="input-field col s6">
-              <input id="nom" type="text" class="validate" name="secondName">
+              <div class="fake"><input name="fake-field"></div>
+              <input id="nom" type="text" class="validate" name="secondName" required>
               <label for="nom">Nom</label>
             </div>
           </div>
             <div class="row">
               <div class="input-field col s12">
-                <input  id="ville" type="text" class="validate" name="ville">
+                <div class="fake"><input name="fake-field"></div>
+                <input  id="ville" type="text" class="validate" name="ville" required>
                 <label for="ville">Ville</label>
               </div>
             </div>
           </div>
             <div class="row">
               <div class="input-field col s12">
-                <input id="email" type="email" class="validate" name="idEmail">
+                <div class="fake"><input name="fake-field"></div>
+                <input id="email" type="email" class="validate" name="idEmail" required>
                 <label for="email">Email</label>
               </div>
             </div>
             <div>
-              <button class="btn waves-effect waves-light" type="submit" name="sendemail">Submit
+              <button class="btn waves-effect waves-light" type="submit" name="sendemail" id="submit">Submit
                 <i class="material-icons right">send</i>
               </button>  
             </div>
+            <div class="g-recaptcha" data-sitekey="6Le1VcYUAAAAAJlLO7qGLJ3fauBNMlMOwDmHJJAF"></div>
         </form>
       </div>
     </form>
 
-
+</section>
 
 
     <!--PHP DU FORMULAIRE -->
 <?php
+   
 
 
     require 'vendor/autoload.php'; // If you're using Composer (recommended)
@@ -188,38 +195,63 @@ document.addEventListener('DOMContentLoaded', function() {
     // replacing <PATH TO> with the path to the sendgrid-php.php file,
     // which is included in the download:
     // https://github.com/sendgrid/sendgrid-php/releases
-
-    if(isset($_POST["sendemail"])){
-      $name = $_POST["firstName"];
-      $secondName = $_POST["secondName"];
-      $city = $_POST["ville"];
-      $mail = $_POST["idEmail"];
-
-      $email = new \SendGrid\Mail\Mail(); 
-      $email->setFrom("chahid.lorenzo@outlook.com", "Lorenzo");
-      $email->setSubject("Sending with SendGrid is Fun");
-      $email->addTo($mail, $name);
-      $email->addContent("text/plain", "and easy to do anywhere, even with PHP");
-      $email->addContent(
-          "text/html", "<strong>and easy to do anywhere, even with PHP</strong>"
-      );
-      $sendgrid = new \SendGrid(getenv("SENDGRID_API_KEY"));
-      //if($sendgrid->send($email)){
-       // echo " Email sent SuccessFully";
-      //}else{
-      //  echo "errors";
-      //}
+  
+      if(isset($_POST['fake-field']) && $_POST['fake-field'] != ''){
+                header('Location: http://www.monsite.com/fake-confirmation/');
+                exit('Redirecting you to http://www.monsite.com/fake-confirmation/');
+      } else {
+        if(isset($_POST["sendemail"])){
+          $name = $_POST["firstName"];
+          $secondName = $_POST["secondName"];
+          $city = $_POST["ville"];
+          $mail = $_POST["idEmail"];
     
-     try {
-         $response = $sendgrid->send($email);
-        print $response->statusCode() . "\n";
-        print_r($response->headers());
-        print $response->body() . "\n";
-        echo "SEND EMAIL WITH SUCCES";
-     } catch (Exception $e) {
-        echo 'Caught exception: '. $e->getMessage() ."\n";
-     }
-    }
+          $email = new \SendGrid\Mail\Mail(); 
+          $email->setFrom("chahid.lorenzo@outlook.com", "Lorenzo");
+          $email->setSubject("Sending with SendGrid is Fun");
+          $email->addTo($mail, $name);
+          $email->addContent("text/plain", "and easy to do anywhere, even with PHP");
+          $email->addContent(
+              "text/html", "<strong>and easy to do anywhere, even with PHP</strong>"
+          );
+          $sendgrid = new \SendGrid(getenv("SENDGRID_API_KEY"));
+          //if($sendgrid->send($email)){
+           // echo " Email sent SuccessFully";
+          //}else{
+          //  echo "errors";
+          //}
+        
+         try {
+             $response = $sendgrid->send($email);
+            //print $response->statusCode() . "\n";
+            //print_r($response->headers());
+            //print $response->body() . "\n";
+            echo "SEND EMAIL WITH SUCCES";
+         } catch (Exception $e) {
+            echo 'Caught exception: '. $e->getMessage() ."\n";
+         }
+        }
+    
+        try{
+          $bdd = new PDO('mysql:host=localhost;dbname=form_php;charset=utf8', 'root', 'root');
+        } catch(Exception $e) {
+            die('Erreur : '.$e->getMessage());
+        }
+        
+        $req = $bdd->prepare('INSERT INTO hackers_poulette(nom, prenom, ville, email) VALUES(:nom, :prenom, :ville, :email)');
+        $req->execute(array(
+            'nom' => $name = $_POST["firstName"],
+            'prenom' => $secondName = $_POST["secondName"],
+            'ville' => $city = $_POST["ville"],
+            'email' => $mail = $_POST["idEmail"],
+            
+            ));
+        
+        echo 'Les données ont bien été ajouté !';
+      
+      }
+
+    
 
 
 
@@ -301,10 +333,12 @@ document.addEventListener('DOMContentLoaded', function() {
     
 </section>
 
+    
 
    
-   
+   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+   <script src="assets/js/script.js"></script>
    
 </body>
 </html>

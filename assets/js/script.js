@@ -16,7 +16,7 @@
 
     let emailRegex = /^[A-Z0-9](\.?[A-Z0-9])+@[A-Z0-9](\.?[A-Z0-9])+\.[A-Z]{2,3}$/i;
     let emailResult = emailRegex.test(emailTry);
-    alert("email:"+emailResult );
+    alert(emailResult + "Veuillez entrer un email valide !");
   })
   
   

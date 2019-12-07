@@ -233,41 +233,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 <!-- *********************************************-- SECTION ABOUT US START *********************************************-->
-<section id="about" class="row ">
-  <h2>QUI NOUS SOMMES</h2>
+<section id="about" class="row">
+  <h2>QUI SOMMMES-NOUS</h2>
 
-  <div class="col s12 m6 l6 " id="moche">
-        <div class="card-panel grey lighten-5 z-depth-1">
-          <div class="row valign-wrapper">
-            <div class="col s2">
-              <img src="assets/img/LorenzoMoche.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
-            </div>
-            <div class="col s10">
-              <span class="black-text">
-                This is a square image. Add the "circle" class to it to make it appear circular.
-              </span>
-            </div>
-          </div>
+  <div class="col s12 m6 l6 " class="moche2">
+      <div class="card-panel grey lighten-5 ">
+          <img src="assets/img/GabyMoche.jpg" alt="photo_grimace_fille" id="photoFille"class="circle responsive-img"> <!-- notice the "circle" class -->
+          <div class="black-text">
+          <h4>CEO-Lorenzo</h4>
+          <p class="txtImg">Formé chez Becode, il a vite développé son talent de CEO. Il a par la suite ouvert ce site de vente et formation.</p>
         </div>
       </div>
+        
+  </div>
 
-      <div class="col s12 m6 l6 " >
-        <div class="card-panel grey lighten-5 z-depth-1">
-          <div class="row valign-wrapper">
-            <div class="col s2" id="moche">
-              <div id="picture_ugly">
-                <img src="assets/img/GabyMoche.jpg"  alt="photo_grimace_fille" class="circle responsive-img"> <!-- notice the "circle" class -->
-              </div>
-            </div>
-            <div class="col s10">
-              <span class="black-text">
-                This is a square image. Add the "circle" class to it to make it appear circular.
-              </span>
-            </div>
-          </div>
+  <div class="col s12 m6 l6 " class="moche2">
+      <div class="card-panel grey lighten-5 ">
+          <img src="assets/img/LorenzoMoche.jpg" alt="photo_grimace_garçon" id="photoGars" class="circle responsive-img"> <!-- notice the "circle" class -->
+          <div class="black-text">
+          <h4>CEO-Lorenzo</h4>
+          <p class="txtImg">Formé chez Becode, il a vite développé son talent de CEO. Il a par la suite ouvert ce site de vente et formation.</p>
         </div>
       </div>
+        
+  </div>
 
+  
+
+      
       
 </section>
 
@@ -295,7 +288,7 @@ document.addEventListener('DOMContentLoaded', function() {
           </div>
           <div class="footer-copyright">
             <div class="container">
-            © 2014 Copyright Text
+            © 2019 Hackers Poulette
             <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             </div>
           </div>

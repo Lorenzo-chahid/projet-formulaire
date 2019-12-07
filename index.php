@@ -97,28 +97,39 @@
 <!-- *********************************************-- SECTION ECRAN 2 FIN *********************************************-->
 
 
-<!-- *********************************************-- SECTION ECRAN 3 START *********************************************-->
-<section id="produit" >
+<!-- *********************************************-- SECTION CARROUSSEL 3 START *********************************************-->
 
-  
-  
-</section>
+<div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="assets/img/gros-plan.jpg" alt= "robot_car"> 
+        <div class="caption center-align"></div>
+      </li>
+      <li>
+        <img src="assets/img/borne.jpg"> 
+        <div class="caption left-align"></div>
+      </li>
+      <li>
+        <img src="assets/img/ras3.jpg"> 
+        <div class="caption right-align"></div>
+      </li>
+      <li>
+        <img src="assets/img/nitendo.jpg"> 
+        <div class="caption center-align"></div>
+      </li>
+    </ul>
+  </div>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    let elems = document.querySelectorAll('.slider');
+    let instances = M.Slider.init(elems);
+  });
+</script>
+        
+
+<!-- *********************************************-- SECTION CARROUSSEL 3 FIN *********************************************-->
  
-
-
-  
-
-
-
-
-<!-- *********************************************-- SECTION ECRAN 3 FIN *********************************************-->
-
-
-
-  
-
-  
 <!-- *********************************************-- SECTION FORMULAIRE *********************************************-->
 
 <section id="infoclub">
@@ -278,9 +289,37 @@
 
 
 <!-- *********************************************-- SECTION ABOUT US START *********************************************-->
-<section id="about">
-  <h2>QUI NOUS SOMMES</h2>
+<section id="about" class="row">
+  <h2>QUI SOMMMES-NOUS</h2>
+
+  <div class="col s12 m6 l6 " class="moche2">
+      <div class="card-panel grey lighten-5 ">
+          <img src="assets/img/GabyMoche.jpg" alt="photo_grimace_fille" id="photoFille"class="circle responsive-img"> <!-- notice the "circle" class -->
+          <div class="black-text">
+          <h4>CEO-Lorenzo</h4>
+          <p class="txtImg">Formé chez Becode, il a vite développé son talent de CEO. Il a par la suite ouvert ce site de vente et formation.</p>
+        </div>
+      </div>
+        
+  </div>
+
+  <div class="col s12 m6 l6 " class="moche2">
+      <div class="card-panel grey lighten-5 ">
+          <img src="assets/img/LorenzoMoche.jpg" alt="photo_grimace_garçon" id="photoGars" class="circle responsive-img"> <!-- notice the "circle" class -->
+          <div class="black-text">
+          <h4>CEO-Lorenzo</h4>
+          <p class="txtImg">Formé chez Becode, il a vite développé son talent de CEO. Il a par la suite ouvert ce site de vente et formation.</p>
+        </div>
+      </div>
+        
+  </div>
+
+  
+
+      
+      
 </section>
+
 
 <!-- *********************************************-- SECTION ABOUT US END *********************************************-->
 
@@ -305,7 +344,7 @@
           </div>
           <div class="footer-copyright">
             <div class="container">
-            © 2014 Copyright Text
+            © 2019 Hackers Poulette
             <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             </div>
           </div>

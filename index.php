@@ -97,28 +97,34 @@
 <!-- *********************************************-- SECTION ECRAN 2 FIN *********************************************-->
 
 
-<!-- *********************************************-- SECTION ECRAN 3 START *********************************************-->
-<section id="produit" >
+<!-- *********************************************-- SECTION CARROUSSEL 3 START *********************************************-->
 
-  
-  
-</section>
+<div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="assets/img/gros-plan.jpg" alt= "robot_car"> 
+        <div class="caption center-align"></div>
+      </li>
+      <li>
+        <img src="assets/img/borne.jpg"> 
+        <div class="caption left-align"></div>
+      </li>
+      <li>
+        <img src="assets/img/ras3.jpg"> 
+        <div class="caption right-align"></div>
+      </li>
+      <li>
+        <img src="assets/img/nitendo.jpg"> 
+        <div class="caption center-align"></div>
+      </li>
+    </ul>
+  </div>
 
+
+        
+
+<!-- *********************************************-- SECTION CARROUSSEL 3 FIN *********************************************-->
  
-
-
-  
-
-
-
-
-<!-- *********************************************-- SECTION ECRAN 3 FIN *********************************************-->
-
-
-
-  
-
-  
 <!-- *********************************************-- SECTION FORMULAIRE *********************************************-->
 
 <section id="infoclub">
@@ -162,7 +168,6 @@
                 <i class="material-icons right">send</i>
               </button>  
             </div>
-            <div class="g-recaptcha" data-sitekey="6Le1VcYUAAAAAJlLO7qGLJ3fauBNMlMOwDmHJJAF"></div>
         </form>
       </div>
     </form>
@@ -170,81 +175,6 @@
 </section>
 
 
-    <!--PHP DU FORMULAIRE -->
-<?php
-   
-
-
-    require 'vendor/autoload.php'; // If you're using Composer (recommended)
-    
-    // Comment out the above line if not using Composer
-    //require("sendgrid-php/sendgrid-php.php");
-    // If not using Composer, uncomment the above line and
-    // download sendgrid-php.zip from the latest release here,
-    // replacing <PATH TO> with the path to the sendgrid-php.php file,
-    // which is included in the download:
-    // https://github.com/sendgrid/sendgrid-php/releases
-  
-      if(isset($_POST['fake-field']) && $_POST['fake-field'] != ''){
-                header('Location: http://www.monsite.com/fake-confirmation/');
-                exit('Redirecting you to http://www.monsite.com/fake-confirmation/');
-      } else {
-        if(isset($_POST["sendemail"])){
-          $name = $_POST["firstName"];
-          $secondName = $_POST["secondName"];
-          $city = $_POST["ville"];
-          $mail = $_POST["idEmail"];
-    
-          $email = new \SendGrid\Mail\Mail(); 
-          $email->setFrom("chahid.lorenzo@outlook.com", "Lorenzo");
-          $email->setSubject("Sending with SendGrid is Fun");
-          $email->addTo($mail, $name);
-          $email->addContent("text/plain", "and easy to do anywhere, even with PHP");
-          $email->addContent(
-              "text/html", "<strong>and easy to do anywhere, even with PHP</strong>"
-          );
-          $sendgrid = new \SendGrid(getenv("SENDGRID_API_KEY"));
-          //if($sendgrid->send($email)){
-           // echo " Email sent SuccessFully";
-          //}else{
-          //  echo "errors";
-          //}
-        
-         try {
-             $response = $sendgrid->setTemplateId(getenv(ID_KEY));
-            //print $response->statusCode() . "\n";
-            //print_r($response->headers());
-            //print $response->body() . "\n";
-            echo "SEND EMAIL WITH SUCCES";
-         } catch (Exception $e) {
-            echo 'Caught exception: '. $e->getMessage() ."\n";
-         }
-        }
-    
-        try{
-          $bdd = new PDO('mysql:host=localhost;dbname=form_php;charset=utf8', 'root', 'root');
-        } catch(Exception $e) {
-            die('Erreur : '.$e->getMessage());
-        }
-        
-        $req = $bdd->prepare('INSERT INTO hackers_poulette(nom, prenom, ville, email) VALUES(:nom, :prenom, :ville, :email)');
-        $req->execute(array(
-            'nom' => $name = $_POST["firstName"],
-            'prenom' => $secondName = $_POST["secondName"],
-            'ville' => $city = $_POST["ville"],
-            'email' => $mail = $_POST["idEmail"],
-            
-            ));
-        
-        echo 'Les données ont bien été ajouté !';
-      
-      }
-
-    
-
-
-
-?>
   
 
 <!-- SEND EMAIL BY SENDGRID -->
@@ -254,9 +184,37 @@
 
 
 <!-- *********************************************-- SECTION ABOUT US START *********************************************-->
-<section id="about">
-  <h2>QUI NOUS SOMMES</h2>
+<section id="about" class="row">
+  <h2>QUI SOMMMES-NOUS</h2>
+
+  <div class="col s12 m6 l6 " class="moche2">
+      <div class="card-panel grey lighten-5 ">
+          <img src="assets/img/GabyMoche.jpg" alt="photo_grimace_fille" id="photoFille"class="circle responsive-img"> <!-- notice the "circle" class -->
+          <div class="black-text">
+          <h4>CEO-Lorenzo</h4>
+          <p class="txtImg">Formé chez Becode, il a vite développé son talent de CEO. Il a par la suite ouvert ce site de vente et formation.</p>
+        </div>
+      </div>
+        
+  </div>
+
+  <div class="col s12 m6 l6 " class="moche2">
+      <div class="card-panel grey lighten-5 ">
+          <img src="assets/img/LorenzoMoche.jpg" alt="photo_grimace_garçon" id="photoGars" class="circle responsive-img"> <!-- notice the "circle" class -->
+          <div class="black-text">
+          <h4>CEO-Lorenzo</h4>
+          <p class="txtImg">Formé chez Becode, il a vite développé son talent de CEO. Il a par la suite ouvert ce site de vente et formation.</p>
+        </div>
+      </div>
+        
+  </div>
+
+  
+
+      
+      
 </section>
+
 
 <!-- *********************************************-- SECTION ABOUT US END *********************************************-->
 
@@ -281,7 +239,7 @@
           </div>
           <div class="footer-copyright">
             <div class="container">
-            © 2014 Copyright Text
+            © 2019 Hackers Poulette
             <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             </div>
           </div>
@@ -293,13 +251,114 @@
         
     
 </section>
+  <!--PHP DU FORMULAIRE -->
+  <?php
+   
+
+
+   require 'vendor/autoload.php'; // If you're using Composer (recommended)
+   
+   // Comment out the above line if not using Composer
+   //require("sendgrid-php/sendgrid-php.php");
+   // If not using Composer, uncomment the above line and
+   // download sendgrid-php.zip from the latest release here,
+   // replacing <PATH TO> with the path to the sendgrid-php.php file,
+   // which is included in the download:
+   // https://github.com/sendgrid/sendgrid-php/releases
+   $options = array(
+     'firstName' 	=> FILTER_SANITIZE_STRING,
+     'secondName' 	=> FILTER_SANITIZE_STRING,
+     'idMail' 		    => FILTER_VALIDATE_EMAIL,
+     'subject' 		=> FILTER_SANITIZE_STRING,
+     'country' 		=> FILTER_SANITIZE_STRING);
+    
+
+     $result = filter_input_array(INPUT_POST, $options);  
+
+     if ($result != null AND $result != FALSE) {
+
+       echo "Tous les champs ont été nettoyés !";
+     
+     } else {
+     
+       echo "Un champ est vide ou n'est pas correct!";
+     
+     }
+     foreach($options as $key => $value) 
+     {
+        $result[$key]=trim($result[$key]);
+        
+     }
+ 
+     if(isset($_POST['fake-field']) && $_POST['fake-field'] != ''){
+               header('Location: http://www.monsite.com/fake-confirmation/');
+               exit('Redirecting you to http://www.monsite.com/fake-confirmation/');
+     } else {
+       if(isset($_POST["sendemail"])){
+         $name = $_POST["firstName"];
+         $secondName = $_POST["secondName"];
+         $city = $_POST["ville"];
+         $mail = $_POST["idEmail"];
+   
+         $email = new \SendGrid\Mail\Mail(); 
+         $email->setFrom("chahid.lorenzo@outlook.com", "Lorenzo");
+         $email->setSubject("Sending with SendGrid is Fun");
+         $email->addTo($mail, $name);
+         $email->addContent("text/plain", "and easy to do anywhere, even with PHP");
+         $email->addContent(
+             "text/html", "<strong>and easy to do anywhere, even with PHP</strong>"
+         );
+         $sendgrid = new \SendGrid(getenv("SENDGRID_API_KEY"));
+         //if($sendgrid->send($email)){
+          // echo " Email sent SuccessFully";
+         //}else{
+         //  echo "errors";
+         //}
+       
+        try {
+            $response = $sendgrid->send($email);
+           //print $response->statusCode() . "\n";
+           //print_r($response->headers());
+           //print $response->body() . "\n";
+           echo "SEND EMAIL WITH SUCCES";
+        } catch (Exception $e) {
+           echo 'Caught exception: '. $e->getMessage() ."\n";
+        }
+       }
+   
+       try{
+         $bdd = new PDO('mysql:host=localhost;dbname=form_php;charset=utf8', 'root', 'root');
+       } catch(Exception $e) {
+           die('Erreur : '.$e->getMessage());
+       }
+       
+       $req = $bdd->prepare('INSERT INTO hackers_poulette(nom, prenom, ville, email) VALUES(:nom, :prenom, :ville, :email)');
+       $req->execute(array(
+           'nom' => $name = $_POST["firstName"],
+           'prenom' => $secondName = $_POST["secondName"],
+           'ville' => $city = $_POST["ville"],
+           'email' => $mail = $_POST["idEmail"],
+           
+           ));
+       
+       echo 'Les données ont bien été ajouté !';
+     
+     }
+
+   
+
+
+
+?>
+ 
 
     
 
    
-   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+   
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
    <script src="assets/js/script.js"></script>
+  
    
 </body>
 </html>

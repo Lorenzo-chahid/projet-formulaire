@@ -1,6 +1,12 @@
 @charset "UTF-8";
 * {
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  color: #4db6ac;
 }
 
 nav {
@@ -50,6 +56,70 @@ h2 {
   min-height: 100vh;
 }
 
+#about {
+  min-height: 105vh;
+  background: #303030;
+  margin-top: 5rem;
+  padding-top: 5rem;
+}
+
+.moche {
+  min-height: 60vh;
+  background-color: chocolate;
+}
+
+#photoFille {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 10vh;
+  min-width: 10vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#photoGars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.moche2 {
+  min-height: 1000px;
+  background-color: cornflowerblue;
+}
+
+.testii {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.black-text {
+  margin: auto;
+  background-color: green;
+}
+
+.black-text h4 {
+  text-align: center;
+}
+
+.txtImg {
+  text-align: center;
+}
+
+#search {
+  background-color: #4db6ac;
+}
 form .fake {
   display: none;
 }

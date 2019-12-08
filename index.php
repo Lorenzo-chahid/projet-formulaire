@@ -142,20 +142,20 @@
           <div class="row">
             <div class="input-field col s6">
               <div class="fake"><input name="fake-field"></div>
-              <input id="prenom" type="text" class="validate" name="firstName" required pattern="^[A-Za-zÀ-ÿ ,.'-]+$"> <!--pattern="^[A-Za-zÀ-ÿ ,.'-]+$"-->
+              <input id="prenom" type="text" class="validate" name="firstName" > <!--pattern="^[A-Za-zÀ-ÿ ,.'-]+$"-->
               <label for="prenom">Prénom</label>
               
             </div>
             <div class="input-field col s6">
               <div class="fake"><input name="fake-field"></div>
-              <input id="nom" type="text" class="validate" name="secondName" required>
+              <input id="nom" type="text" class="validate" name="secondName">
               <label for="nom">Nom</label>
             </div>
           </div>
             <div class="row">
               <div class="input-field col s12">
                 <div class="fake"><input name="fake-field"></div>
-                <input  id="ville" type="text" class="validate" name="ville" required>
+                <input  id="ville" type="text" class="validate" name="ville" >
                 <label for="ville">Ville</label>
               </div>
             </div>
@@ -163,7 +163,7 @@
             <div class="row">
               <div class="input-field col s12">
                 <div class="fake"><input name="fake-field"></div>
-                <input id="email" type="email" class="validate" name="idEmail" required>
+                <input id="email" type="email" class="validate" name="idEmail" >
                 <label for="email">Email</label>
               </div>
             </div>
@@ -184,8 +184,9 @@
               <button class="btn waves-effect waves-light" type="submit" name="sendemail" id="submit">Submit
                 <i class="material-icons right">send</i>
               </button>  
+
             </div>
-            <div class="g-recaptcha" data-sitekey="6Le1VcYUAAAAAJlLO7qGLJ3fauBNMlMOwDmHJJAF"></div>
+            <p id="test"></p>
         </form>
       </div>
     </form>
@@ -284,35 +285,36 @@
    // replacing <PATH TO> with the path to the sendgrid-php.php file,
    // which is included in the download:
    // https://github.com/sendgrid/sendgrid-php/releases
-   $options = array(
-     'firstName' 	=> FILTER_SANITIZE_STRING,
-     'secondName' 	=> FILTER_SANITIZE_STRING,
-     'idMail' 		    => FILTER_VALIDATE_EMAIL,
-     'subject' 		=> FILTER_SANITIZE_STRING,
-     'country' 		=> FILTER_SANITIZE_STRING);
-    
-
-     $result = filter_input_array(INPUT_POST, $options);  
-
-     if ($result != null AND $result != FALSE) {
-
-       echo "Tous les champs ont été nettoyés !";
-     
-     } else {
-     
-       echo "Un champ est vide ou n'est pas correct!";
-     
-     }
-     foreach($options as $key => $value) 
-     {
-        $result[$key]=trim($result[$key]);
-        
-     }
+   
  
      if(isset($_POST['fake-field']) && $_POST['fake-field'] != ''){
                header('Location: http://www.monsite.com/fake-confirmation/');
                exit('Redirecting you to http://www.monsite.com/fake-confirmation/');
      } else {
+      $options = array(
+        'firstName' 	=> FILTER_SANITIZE_STRING,
+        'secondName' 	=> FILTER_SANITIZE_STRING,
+        'idMail' 		    => FILTER_VALIDATE_EMAIL,
+        'subject' 		=> FILTER_SANITIZE_STRING,
+        'country' 		=> FILTER_SANITIZE_STRING);
+       
+   
+        $result = filter_input_array(INPUT_POST, $options);  
+   
+        if ($result != null AND $result != FALSE) {
+   
+          echo "Tous les champs ont été nettoyés !";
+        
+        } else {
+        
+          echo "Un champ est vide ou n'est pas correct!";
+        
+        }
+        foreach($options as $key => $value) 
+        {
+           $result[$key]=trim($result[$key]);
+           
+        }
        if(isset($_POST["sendemail"])){
          $name = $_POST["firstName"];
          $secondName = $_POST["secondName"];
@@ -374,10 +376,10 @@
     
 
    
-   
+    <script src="assets/js/script.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-   <script src="assets/js/script.js"></script>
-   <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+   
    
 </body>
 </html>

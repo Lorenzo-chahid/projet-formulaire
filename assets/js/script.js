@@ -4,6 +4,10 @@
     let elems = document.querySelectorAll('.slider');
     let instances = M.Slider.init(elems);
   });
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, options);
+  });
 
   document.getElementById("submit").addEventListener("click", ()=>{
     let emailTry = document.getElementById('email').value;

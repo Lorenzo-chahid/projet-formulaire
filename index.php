@@ -62,14 +62,16 @@
       
         <div class="card horizontal">
           <div class="card-image">
-            <img src="assets/img/mimi_car.jpeg" alt="mini car pink" class="imgBase">
+            <img src="assets/img/card.jpeg" alt="raspberry pi card" class="imgBase">
           </div>
           <div class="card-stacked">
             <div class="card-content">
-              <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+              <p>Chez Hackers Poulettes nous vous proposons la vente de carte raspberry pi, ou bien carrément des kits. 
+                Avec ces kits on peut faire tout un tas de choses, comme des petits robots ou bien des jeux vidéos rétros. 
+                A vous de jouer ! </p>
             </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
+            <!--<div class="card-action">
+              <a href="#">This is a link</a>-->
             </div>
           </div>
         </div>
@@ -81,14 +83,16 @@
         <div class="card horizontal">
           <div class="card-stacked">
             <div class="card-content">
-              <p>I am a very simple card. I am good at containing small bits of information.</p>
+              <p>Nous vous proposons aussi des diverses formations pour pouvoir coder les cartes et construires ce qu'il faut,
+                comme une petite voiture, des bornes d'arcades etc.
+                N'hésitez pas a vous inscrire pour avoir plus d'informations et pour eventuellement être pris dans nos formations ! </p>
             </div>
             <div class="card-action">
               <a href="#">This is a link</a>
             </div>
           </div>
           <div class="card-image">
-            <img src="assets/img/card.jpeg" alt="raspberry pi card" class="imgBase">
+            <img src="assets/img/mimi_car.jpeg" alt="obot_car" class="imgBase">
           </div>
         </div>
       </div>
@@ -163,6 +167,19 @@
                 <label for="email">Email</label>
               </div>
             </div>
+            <!--Liste deroulante1-->
+            <div class="input-field col s12">
+              <select>
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+              </select>
+              <label>Materialize Select</label>
+            </div>
+
+            <!--Fin liste deroulante1-->
+
             <div>
               <button class="btn waves-effect waves-light" type="submit" name="sendemail" id="submit">Submit
                 <i class="material-icons right">send</i>
@@ -175,6 +192,7 @@
     </form>
 
 </section>
+
 
 
   

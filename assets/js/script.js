@@ -6,11 +6,7 @@
 
     let nameResult = nameRegex.test(nameTry)
     
-  document.addEventListener('DOMContentLoaded', function() {
-    let elems = document.querySelectorAll('.slider');
-    let instances = M.Slider.init(elems);
-    instances
-  });
+ 
   document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('select');
     var instances = M.FormSelect.init(elems, options);

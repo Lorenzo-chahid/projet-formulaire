@@ -169,7 +169,7 @@
               </button>  
 
             </div>
-            <p id="test"></p>
+            <p id="test">test</p>
         </form>
       </div>
     </form>

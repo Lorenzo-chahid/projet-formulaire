@@ -9,15 +9,19 @@
   document.getElementById("submit").addEventListener("click", ()=>{
     let emailTry = document.getElementById('email').value;
     let nameTry = document.getElementById('prenom').value;
-    let nameRegex = /^[a-zA-Z ]{2,30}$/
+    let nameRegex = /^[a-zA-Z ]{2,30}$/;
 
     let nameResult = nameRegex.test(nameTry)
-    alert(nameResult +" Merci de rentrer un nom valide" )
-
+    if(nameResult == false){
+      alert("Merci de rentrer un nom valide")
+    };
 
     let emailRegex = /^[A-Z0-9](\.?[A-Z0-9])+@[A-Z0-9](\.?[A-Z0-9])+\.[A-Z]{2,3}$/i;
     let emailResult = emailRegex.test(emailTry);
-    alert(emailResult + "Veuillez entrer un email valide !");
+    if(emailResult == false){
+      alert("Merci de rentrer un email valide")
+      return document.getElementById("inscription")
+    };
   })
   
   
@@ -27,7 +31,7 @@
 
 
  { 
-     var xhr; 
+     let xhr; 
      try {  xhr = new ActiveXObject('Msxml2.XMLHTTP');   }
      catch (e) 
      {
@@ -55,9 +59,9 @@
  } 
 })
 
- var form  = document.getElementsByTagName('form')[0];
- var email = document.getElementById('mail');
- var error = document.querySelector('.error');
+ let form  = document.getElementsByTagName('form')[0];
+ let email = document.getElementById('mail');
+ let error = document.querySelector('.error');
  
  email.addEventListener("input", function (event) {
    // Chaque fois que l'utilisateur saisit quelque chose

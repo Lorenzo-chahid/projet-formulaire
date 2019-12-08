@@ -168,7 +168,6 @@
                 <i class="material-icons right">send</i>
               </button>  
             </div>
-            <div class="g-recaptcha" data-sitekey="6Le1VcYUAAAAAJlLO7qGLJ3fauBNMlMOwDmHJJAF"></div>
         </form>
       </div>
     </form>

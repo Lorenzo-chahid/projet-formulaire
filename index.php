@@ -47,7 +47,7 @@
         
           <div class="row">
           <div class="col s12  cyan darken-3 "id="background" >
-              <div id="center">
+              <div class="center deux">
               <a href="#i"class="waves-effect waves-light btn-large pulse tooltip" id="callTo" >REJOINGEZ NOUS</a>
               </div>
           </div>
@@ -88,7 +88,7 @@
                 N'hésitez pas a vous inscrire pour avoir plus d'informations et pour eventuellement être pris dans nos formations ! </p>
             </div>
             <div class="card-action">
-              <a href="#">This is a link</a>
+              <a href="#"></a>
             </div>
           </div>
           <div class="card-image">
@@ -170,23 +170,23 @@
             <!--Liste deroulante1-->
             <div class="input-field col s12">
               <select>
-                <option value="" disabled selected>Choose your option</option>
+                <option value="" >Choose your option</option>
                 <option value="1">Option 1</option>
                 <option value="2">Option 2</option>
                 <option value="3">Option 3</option>
               </select>
-              <label>Materialize Select</label>
+              
             </div>
 
             <!--Fin liste deroulante1-->
 
-            <div>
-              <button class="btn waves-effect waves-light" type="submit" name="sendemail" id="submit">Submit
+            <div class="center">
+              <button class="btn waves-effect waves-light" type="submit" name="sendemail" id="submit" >Submit
                 <i class="material-icons right">send</i>
               </button>  
 
             </div>
-            <p id="test">test</p>
+            
         </form>
       </div>
     </form>
@@ -209,7 +209,7 @@
 
   <div class="col s12 m6 l6 " class="moche2">
       <div class="card-panel grey lighten-5 ">
-          <img src="assets/img/GabyMoche.jpg" alt="photo_grimace_fille" id="photoFille"class="circle responsive-img"> <!-- notice the "circle" class -->
+          <img src="assets/img/GabyMoche.jpg" alt="photo_grimace_fille" id="photoFille"class="circle responsive-img moche3"> <!-- notice the "circle" class -->
           <div class="black-text">
           <h4>CEO-Lorenzo</h4>
           <p class="txtImg">Formé chez Becode, il a vite développé son talent de CEO. Il a par la suite ouvert ce site de vente et formation.</p>
@@ -220,7 +220,7 @@
 
   <div class="col s12 m6 l6 " class="moche2">
       <div class="card-panel grey lighten-5 ">
-          <img src="assets/img/LorenzoMoche.jpg" alt="photo_grimace_garçon" id="photoGars" class="circle responsive-img"> <!-- notice the "circle" class -->
+          <img src="assets/img/LorenzoMoche.jpg" alt="photo_grimace_garçon" id="photoGars" class="circle responsive-img moche3"> <!-- notice the "circle" class -->
           <div class="black-text">
           <h4>CEO-Lorenzo</h4>
           <p class="txtImg">Formé chez Becode, il a vite développé son talent de CEO. Il a par la suite ouvert ce site de vente et formation.</p>
@@ -247,13 +247,8 @@
                 <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
               </div>
               <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                </ul>
+                
+                
               </div>
             </div>
           </div>
@@ -303,11 +298,11 @@
    
         if ($result != null AND $result != FALSE) {
    
-          echo "Tous les champs ont été nettoyés !";
+         
         
         } else {
         
-          echo "Un champ est vide ou n'est pas correct!";
+        
         
         }
         foreach($options as $key => $value) 
@@ -323,7 +318,7 @@
    
          $email = new \SendGrid\Mail\Mail(); 
          $email->setFrom("chahid.lorenzo@outlook.com", "Lorenzo");
-         $email->setSubject("Sending with SendGrid is Fun");
+         $email->setSubject("Welcome to hackers poulette");
          $email->addTo($mail, $name);
          $email->addContent("text/plain", "and easy to do anywhere, even with PHP");
          $email->addContent(
@@ -341,7 +336,7 @@
            //print $response->statusCode() . "\n";
            //print_r($response->headers());
            //print $response->body() . "\n";
-           echo "SEND EMAIL WITH SUCCES";
+           
         } catch (Exception $e) {
            echo 'Caught exception: '. $e->getMessage() ."\n";
         }
@@ -362,7 +357,7 @@
            
            ));
        
-       echo 'Les données ont bien été ajouté !';
+      
      
      }
 

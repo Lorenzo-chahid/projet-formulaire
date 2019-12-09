@@ -5,8 +5,14 @@
   padding: 0;
 }
 
+p {
+  font-size: 1.3rem;
+}
+
 h2 {
   color: #4db6ac;
+  scroll-behavior: smooth;
+  text-align: center;
 }
 
 nav {
@@ -23,7 +29,7 @@ h1 {
   color: white;
 }
 
-h2 {
+h4 {
   text-align: center;
 }
 
@@ -31,8 +37,7 @@ h2 {
   width: 5rem;
 }
 
-#center {
-  min-height: 100vh;
+.center {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,6 +52,10 @@ h2 {
   margin: auto;
 }
 
+.deux {
+  min-height: 100vh;
+}
+
 #background {
   background-image: url("../img/Back_logo.jpg");
   background-repeat: no-repeat;
@@ -57,7 +66,7 @@ h2 {
 }
 
 #about {
-  min-height: 105vh;
+  min-height: 75vh;
   background: #303030;
   margin-top: 5rem;
   padding-top: 5rem;
@@ -95,7 +104,6 @@ h2 {
 }
 
 .moche2 {
-  min-height: 1000px;
   background-color: cornflowerblue;
 }
 
@@ -104,9 +112,25 @@ h2 {
   min-height: 100%;
 }
 
+.moche3 {
+  max-height: 15rem;
+}
+
+.grey {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .black-text {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 15rem;
   margin: auto;
-  background-color: green;
 }
 
 .black-text h4 {
@@ -120,24 +144,25 @@ h2 {
 #search {
   background-color: #4db6ac;
 }
-form .fake {
+
+#search form .fake {
   display: none;
 }
 
-input:invalid {
+#search input:invalid {
   -webkit-box-shadow: 0 0 5px 1px red;
           box-shadow: 0 0 5px 1px red;
 }
 
-input:focus:invalid {
+#search input:focus:invalid {
   outline: none;
 }
 
-input[type=text],
-input[type=email],
-input[type=number],
-textarea,
-fieldset {
+#search input[type=text],
+#search input[type=email],
+#search input[type=number],
+#search textarea,
+#search fieldset {
   /* requis pour composer de manière appropriée les éléments
    de formulaire sur les navigateurs fondés sur WebKit */
   -webkit-appearance: none;
